@@ -3,11 +3,6 @@ input {
   margin-bottom: 1rem;
 }
 
-label {
-  @extend %small-caps;
-  color: $color_gray-600;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -16,13 +11,13 @@ select,
 option,
 textarea {
   width: 100%;
-  color: $color_text;
+  color: var(--color-black);
   background: transparent;
   border: 0;
-  border-bottom: solid 2px $color_gray-100;
+  border-bottom: solid 2px var(--color-gray-100);
   -webkit-appearance: none;
   &::placeholder {
-    color: $color_gray-300;
+    color: var(--color-gray-300);
   }
 }
 
@@ -39,7 +34,7 @@ select,
 textarea,
 .button,
 button {
-  font-family: $font-family_head;
+  @extend %font-family-primary; 
   font-size: 1.25rem;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -68,22 +63,20 @@ button,
 [type="reset"] {
   margin-left: auto;
   margin-right: auto;
-  padding: 14px 25px;
-  font-weight: $font-weight_bold;
-  color: $color_text;
+  padding: $spacer-2 $spacer-3;
+  @extend %font-weight-bold;
+  color: var(--color-black);
   background: transparent;
   border-radius: 5px;
-  border: solid 3px $color_primary;
+  border: solid 2px var(--color-purple);
   cursor: pointer;
   @media screen and (max-width: 700px) {
     font-size: 1rem;
   }
   &:hover, &:active {
-    background: $color_primary;
+    background: var(--color-purple);
   }
   &:focus {
-    outline: none;
-    position: relative;
-    top: 2px;
+    outline: none
   }
 }

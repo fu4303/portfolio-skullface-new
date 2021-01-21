@@ -204,13 +204,12 @@
   input[type="text"] {
     width: 100%;
     padding: 0 0 $spacer-1 0;
-    color: var(--color-gray-100);
+    color: var(--color-white);
     border-bottom: solid 2px var(--color-gray-500);
     background-color: transparent;
 
     &::placeholder {
-      color: inherit;
-      color: var(--color-gray-100);
+      color: var(--color-gray-300);
     }
 
     &.focus,
@@ -220,19 +219,9 @@
       background-color: var(--color-gray-800);
     }
   }
-
-  input[type="submit"] {
-    border-radius: $spacer-2;
-    padding: $spacer-2;
-    width: 100%;
-    @extend %font-weight-bold;
-    color: var(--color-white);
-    background-color: var(--color-purple);
-    box-shadow: 0 -2px 0 0 var(--color-purple-pale);
-  }
   
   label.form__checkbox {
-    color: var(--color-gray-100);
+    color: var(--color-white);
   }
 
   legend {
@@ -299,17 +288,16 @@
   }
 }
 
-input[type="submit"]:focus {
-  outline: none;
-  transition: box-shadow 0.125s ease-in-out;
-  box-shadow: 0 0 0 6px var(--color-gray-600);
-}
-
-input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: var(--color-purple-deep);
-}
-
-input[type="submit"]:active {
-  box-shadow: 0 -2px 0 0 var(--color-purple-deeper);
+input[type="submit"] {
+  width: 100%;
+  color: var(--color-white);
+  border-color: var(--color-gray-500);  
+  &:hover,
+  &:focus {
+    border-color: var(--color-purple);
+    background-color: var(--color-purple);
+  }
+  &:active {
+    border-top-color: var(--color-purple-deep);
+  }
 }
