@@ -1,0 +1,315 @@
+.form__form-group--stacked {
+  input {
+    display: block;
+  }
+}
+
+.form__checkbox--horizontal {
+  display: inline-block;
+  margin-right: $spacer-2;
+}
+
+/**
+ *
+ * @group Footer
+ *
+*/
+
+
+.Footer {
+  @include breakpoint(md) {
+    display: flex;
+    align-items: stretch;
+  }
+  margin-top: auto; // push to bottom of page
+  color: var(--color-white);
+  background-color: var(--color-gray-600);
+}
+
+.Footer__newsletter {
+  padding: $spacer-4;
+  @include breakpoint(xl) {
+    padding: $spacer-6;
+  }
+}
+
+// Information section
+
+.Footer__information {
+  width: 100%;
+  @include breakpoint(md) {
+    width: 66%;
+  }
+  padding: $spacer-4 $spacer-6;
+  @include breakpoint(xl) {
+    padding: $spacer-6 $spacer-8;
+  }
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer__bio {
+  @include breakpoint(lg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @extend %margin-bottom-default;
+  
+  svg {
+    display: block;
+    @extend %margin-bottom-condensed;
+    width: 100%;
+    @include breakpoint(sm) {
+      width: 50%;
+    }
+    @include breakpoint(lg) {
+      width: 30%;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    @extend %type-mono-20;
+    @include breakpoint(lg) {
+      margin-left: $spacer-6;
+    }
+    @extend %width-lg-clipped;
+  }
+}
+
+.Footer__links {
+  @include breakpoint(sm) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+//  @media (max-width: #{$width-lg}) {
+  @extend %margin-bottom-default;
+  @extend %line-height-166;
+}
+
+.Footer__links__all {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  a {
+    display: block;
+    color: var(--color-gray-200);
+    @extend %font-weight-bold;
+    text-decoration: none;
+    &:hover {
+      color: var(--color-white);
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+.Footer__links__pages {
+  @extend %margin-bottom-condensed;
+  @include breakpoint(md) {
+    margin-bottom: 0;
+  }
+}
+
+.Footer__links__pages,
+.Footer__links__social {
+  align-self: flex-start;
+  width: 100%;
+  @include breakpoint(sm) {
+    width: 33%;
+  }  
+  @extend %margin-bottom-default;
+  @include breakpoint(sm) {
+    margin-bottom: 0;
+  }
+}
+
+.Footer__links__social svg {
+  position: relative;
+  top: 2px;
+  width: $spacer-2;
+  height: $spacer-2;
+  margin-right: $spacer-1;
+  fill: var(--color-gray-350);
+}
+
+.Footer__skull {
+  fill: var(--color-gray-350);
+  height: 80%;
+  @include breakpoint(sm) {
+    padding: $spacer-1;
+  }
+  @include breakpoint(lg) {
+    padding: 0;
+  }
+}
+
+.Footer__copyright {
+  margin-top: auto;
+  @extend %type-default-13;
+  color: var(--color-gray-350);
+  margin-bottom: 0;
+  a {
+    @extend %font-weight-bold;
+    color: inherit;
+    text-decoration-color: var(--color-gray-400);
+    &:hover {
+      color: var(--color-gray-300);
+      text-decoration-color: var(--color-gray-350);
+    }
+  }
+}
+
+// Newsletter form
+
+.Footer__newsletter {
+  width: 100%;
+  @include breakpoint(md) {
+    width: 33%;
+  }
+
+  background-color: var(--color-gray-800);
+  background-image: url('../../static/global/postmark.png');
+  background-position: center -40px;
+  background-repeat: no-repeat;
+  
+  p {
+    @extend %type-mono-20; 
+    @extend %margin-bottom-default;
+  }
+  
+  fieldset {
+    @extend %margin-bottom-default;
+  }
+  
+  input {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  
+  input,
+  label,
+  legend,
+  span {
+    font-size: min(1rem, 1.125rem);
+  }
+  
+  input[type="email"],
+  input[type="text"] {
+    width: 100%;
+    padding: 0 0 $spacer-1 0;
+    color: var(--color-gray-100);
+    border-bottom: solid 2px var(--color-gray-500);
+    background-color: transparent;
+
+    &::placeholder {
+      color: inherit;
+      color: var(--color-gray-100);
+    }
+
+    &.focus,
+    &:focus {
+      outline: none;
+      border-bottom-color: var(--color-purple);
+      background-color: var(--color-gray-800);
+    }
+  }
+
+  input[type="submit"] {
+    border-radius: $spacer-2;
+    padding: $spacer-2;
+    width: 100%;
+    @extend %font-weight-bold;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    box-shadow: 0 -2px 0 0 var(--color-purple-pale);
+  }
+  
+  label.form__checkbox {
+    color: var(--color-gray-100);
+  }
+
+  legend {
+    @extend %font-weight-bold;
+    color: var(--color-gray-300);
+  }
+}
+
+// Custom checkbox styling
+.form__checkbox {
+  position: relative;
+  cursor: pointer;
+  margin-top: $spacer-2;
+  
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+  }
+  
+  span {
+    margin-left: $spacer-3;
+  }
+
+  input + span {
+    // create checkbox
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid var(--color-gray-500);
+      border-radius: $spacer-quarter;
+    }
+    // simulate ::checked state
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid var(--color-purple);
+      border-radius: $spacer-quarter;
+      background-color: var(--color-purple);
+      opacity: 0;
+      transition: opacity 0.085s ease-in-out;
+    }
+  }
+    
+  // add focus state styling
+  input:hover + span:before,
+  input:focus + span:before  {
+    border-color: var(--color-purple);
+  }
+  
+  input:checked + span:after {
+    opacity: 1;
+  }
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  transition: box-shadow 0.125s ease-in-out;
+  box-shadow: 0 0 0 6px var(--color-gray-600);
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--color-purple-deep);
+}
+
+input[type="submit"]:active {
+  box-shadow: 0 -2px 0 0 var(--color-purple-deeper);
+}

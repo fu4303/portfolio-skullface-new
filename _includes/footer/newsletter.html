@@ -1,0 +1,66 @@
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/skullface"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/skullface', 'popupwindow')"
+  class="newsletter__footer embeddable-buttondown-form"
+> 
+  <fieldset class="form__name">
+    <label for="bd-name">
+      <span class="sr-only">
+        First name
+      </span>
+      <input
+        id="bd-name"
+        type="text"
+        name="metadata__first-name"
+        placeholder="First name" 
+      />
+    </label>
+  </fieldset>
+
+  <fieldset class="form__email">
+    <label for="bd-email">
+      <span class="sr-only">
+        Email address
+      </span>
+      <input type="email" name="email" id="bd-email" placeholder="Email address" required />
+    </label>
+  </fieldset>
+
+  <fieldset class="form__interest">
+    <legend>I want to read about…</legend>
+    
+    <label class="form__checkbox form__checkbox--horizontal" for="interest-design">
+      <input type="checkbox" name="tag" value="interest-design" id="interest-design" />
+      <span>
+        Design
+      </span>
+    </label>
+  
+    <label class="form__checkbox form__checkbox--horizontal" for="interest-development">
+      <input type="checkbox" name="tag" value="interest-development" id="interest-development" />
+      <span>
+        Dev
+      </span>
+    </label>
+    
+    <label class="form__checkbox form__checkbox--horizontal" for="interest-biz-mktg">
+      <input type="checkbox" name="tag" value="interest-biz-mktg" id="interest-biz-mktg" />
+      <span>
+        Biz
+      </span>
+    </label>
+
+    <label class="form__checkbox form__checkbox--horizontal" for="interest-beauty">
+      <input type="checkbox" name="tag" value="interest-beauty" id="interest-beauty" />
+      <span>
+        Beauty
+      </span>
+    </label>
+  </fieldset>
+
+  <input type="hidden" name="tag" value="site-footer" />
+  <input type="hidden" value="1" name="embed"></input>
+  <input type="submit" value="Sign up 💌"></input>
+</form>
