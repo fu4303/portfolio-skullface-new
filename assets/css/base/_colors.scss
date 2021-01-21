@@ -1,0 +1,35 @@
+:root {
+  // Primary
+  --color-purple:           #A542F0;
+  --color-purple-pale:      #B350FF;
+  --color-purple-deep:      #9129DF;
+  --color-purple-deeper:    #7513BE;
+
+  // Secondary
+  --color-chartreuse:       #BEF70B;
+  --color-chartreuse-deep:  #677F1A;
+
+  // Tertiary
+  --color-pink:            #FF1DBA;
+  --color-pink-pale:       #FFA6EE;
+  --color-pink-deep:       #E0009C;
+  --color-cerulean:        #06C8FC;
+  --color-cerulean-deep:   #0880A1;
+  
+  // Monochrome
+  --color-gray-900:        #0C0014; 
+  --color-gray-800:        #22162D;
+  --color-gray-700:        #291D35; // additional shade
+  --color-gray-600:        #352944;
+  --color-gray-500:        #413751;
+  --color-gray-400:        #4C435B; // additional shade
+  --color-gray-350:        #746F89; // additional shade
+  --color-gray-300:        #8D88A3;
+  --color-gray-200:        #B8B1C9;
+  --color-gray-100:        #D8D5E2; // additional shade
+  --color-gray-000:        #FFF;
+  
+  --color-black:           var(--color-gray-900);
+  --color-gray:            var(--color-gray-500);
+  --color-white:           var(--color-gray-000);
+}

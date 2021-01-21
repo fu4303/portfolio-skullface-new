@@ -36,7 +36,8 @@
   <meta name="twitter:creator" content="@skullface">
   <meta property="article:author" content="http://facebook.com/skvllface" />
 
-  <link rel="stylesheet" href="/assets/styles/main.css">
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/main.css' | relative_url }}" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31807302-1"></script>
   <script>
