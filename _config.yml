@@ -40,6 +40,13 @@ exclude:
   - README.md
 
 
+# Sass
+sass:
+  style: :compressed
+  sass_dir: assets/css
+  load_paths:
+    - node_modules/
+
 # Collections
 collections:
   sketches:
