@@ -1,10 +1,10 @@
-name: Jessica Paoli, design babe
-title: Jessica Paoli, design babe
-email: meow@jessicapaoli.com
-author: Jessica Paoli
+name: skullface.me | Design Babe
+title: skullface.me | Design Babe
+email: meow@skullface.me
+author: skullface
 description: I’m an interdisciplinary designer, developer, and illustrator (Design Babe) dual-wielding compassion + cuteness in the Midwest.
 baseurl:  "" # the subpath of your site, e.g. /blog
-url:      "http://jessicapaoli.com" # the base hostname & protocol for your site
+url:      "http://skullface.me" # the base hostname & protocol for your site
 
 logo:         assets/img/mock.jpg
 locale:       en-US
@@ -27,18 +27,15 @@ future:       false
 whitelist:    []
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
-
-# Exclude from site build
 exclude:
-  - .DS_Store
-  - node_modules
-  - gulpfile.js
-  - package.json
+  - README.md
   - Gemfile
   - Gemfile.lock
-  - README.md
-
+  - script
+  - node_modules
+  - vendor
 
 # Sass
 sass:
@@ -46,6 +43,10 @@ sass:
   sass_dir: assets/css
   load_paths:
     - node_modules/
+   
+# Custom variables
+mediapath:
+  post: media/posts/
 
 # Collections
 collections:
@@ -58,7 +59,3 @@ collections:
   products:
     output: true
     permalink: /shop/:path/
-
-# Custom variables
-mediapath:
-  post: media/posts/
