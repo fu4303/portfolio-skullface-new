@@ -1,0 +1,1 @@
+ i hope to build a small habit to maintain activist momentum on here without feeling the need to share “eye-opening” (which for marginalized people can often be re-traumatizing or redundant) content, nor the guilt of appearing to ignore vital issues by posting “regular” content.
