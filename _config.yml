@@ -24,26 +24,31 @@ highlighter:  rouge
 permalink:    /:year/:title
 future:       false
 
-whitelist:    []
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
 exclude:
   - README.md
+  - LICENSE
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - script
   - node_modules
+  - package.json
+  - webpack.config.js
   - vendor
-
+  - "*.lock"
+  - "*.log"
+   
 # Sass
 sass:
   style: :compressed
   sass_dir: assets/css
   load_paths:
     - node_modules/
-   
+
 # Custom variables
 mediapath:
   post: media/posts/
