@@ -10,88 +10,67 @@
   
   <div class="Footer__information">
     <div class="Footer__bio">
-      {% include footer/assets/skull-type.svg %}
+      {% include footer/assets/skull-type.svg class="Footer__skull-type" aria-hidden="true" %}
       <p>
         Skullface (she/her) is an interdisciplinary designer, visual artist, and programmer fighting for love and&nbsp;justice.
       </p>
     </div>
     
     <div class="Footer__links">
-      <div class="Footer__links__all">
-        <nav class="Footer__links__pages">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/favorites">Favorites</a>
-          <a href="/sketchbook">Sketchbook</a>
-          <a href="/contact">Say hi</a>
-        </nav>
-        <nav class="Footer__links__pages">
-          <a href="/resources">Resources</a>
-          <a href="/blog">Blog</a>
-          <a href="/shop">Shop</a>
-          <a href="/projects">Projects</a>
-          <a href="https://falseluck.com">False Luck {% include external-link.html %}</a>
-        </nav>
-        <nav class="Footer__links__social">
-          <a href="https://twitter.com/skullface" class="social-tw">
-            {% include footer/assets/social-twitter.svg %}
-            Twitter
-          </a>
-          <a href="https://youtube.com/c/skullfacekillah" class="social-yt">
-            {% include footer/assets/social-youtube.svg %}
-            YouTube
-          </a>
-          <a href="https://instagram.com/skullface.me" class="social-ig">
-            {% include footer/assets/social-instagram.svg %}
-            Instagram
-          </a>
-          <a href="https://twitch.tv/skvllface" class="social-th">
-            {% include footer/assets/social-twitch.svg %}
-            Twitch
-          </a>
-          <a href="https://github.com/skullface" class="social-gh">
-            {% include footer/assets/social-github.svg %}
-            GitHub
-          </a>
-          <a href="https://www.buymeacoffee.com/skullface" class="social-bc">
-            {% include footer/assets/social-buymeacoffee.svg %}
-            Tip jar
-          </a>
-        </nav>
-      </div>
+      <nav class="Footer__links__pages">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/favorites">Favorites</a>
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/legal">Legal</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <nav class="Footer__links__pages">
+        <a href="/blog">Blog</a>
+        <a href="/resources">Resources</a>
+        <a href="/sketchbook">Sketchbook</a>
+        <a href="/projects">Work</a>
+        <a href="/shop">Shop</a>
+        <a href="https://falseluck.com">False Luck {% include external-link.html %}</a>
+      </nav>
+      <nav class="Footer__links__social">
+        <a href="https://twitter.com/skullface" class="social-tw">
+          {% include footer/assets/social-twitter.svg %}
+          Twitter
+        </a>
+        <a href="https://youtube.com/c/skullfacekillah" class="social-yt">
+          {% include footer/assets/social-youtube.svg %}
+          YouTube
+        </a>
+        <a href="https://instagram.com/skullface.me" class="social-ig">
+          {% include footer/assets/social-instagram.svg %}
+          Instagram
+        </a>
+        <a href="https://twitch.tv/skvllface" class="social-th">
+          {% include footer/assets/social-twitch.svg %}
+          Twitch
+        </a>
+        <a href="https://github.com/skullface" class="social-gh">
+          {% include footer/assets/social-github.svg %}
+          GitHub
+        </a>
+        <a href="https://www.buymeacoffee.com/skullface" class="social-bc">
+          {% include footer/assets/social-buymeacoffee.svg %}
+          Tip jar
+        </a>
+      </nav>
       {% include global/assets/skull.svg class="Footer__skull" aria-hidden="true" %}
     </div>
       
     <p class="Footer__copyright">
       &copy; {{ site.time | date: '%Y' }} False Luck Ltd. Ain&rsquo;t no stoppin&rsquo; me &mdash; copywritten, so don&rsquo;t copy me.
-      <a href="/disclaimer">Disclaimer</a>/<a href="/legal">Legal</a>.
-      Built with love <a href="/favorites">and these tools</a>.
     </p>
   </div>
 </footer>
 
-{% if page.layout == 'home' %}
-<script>
-$( function() {
-    $(".draggable").draggable({ stack: ".draggable" });
-    $(".draggable").draggable({ containment: "#collage", scroll: false });
-})
-</script>
-{% endif %}
+{% include footer/theme-switcher.html %}
 
-{% if page.layout == 'sketchbook' %}
-<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-
-<script>
-  var $grid = $('.sketchbook_sketches').imagesLoaded( function() {
-    $grid.isotope({
-      itemSelector: '.sketchbook_sketch',
-      layoutMode: 'masonry'
-    });
-  });
-</script>
-{% endif %}
+<script defer src="{{ '/assets/js/main.js' | absolute_url }}"></script>
 
 </body>
 </html>
