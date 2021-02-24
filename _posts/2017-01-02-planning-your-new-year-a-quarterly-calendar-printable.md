@@ -3,7 +3,7 @@ layout: post
 title: Planning your new year (+ a quarterly calendar printable)
 description: There are a thousand ways to plan and execute, but I’m sharing my method (with a bonus calendar!) here with you.
 categories:
-  - Planning and productivity
+  - Productivity
   - Tips and tricks
   - Downloads
 image: quarterly-calendar-printable_1.jpg

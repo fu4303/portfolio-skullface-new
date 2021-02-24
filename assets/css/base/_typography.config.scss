@@ -19,17 +19,32 @@ $font-weight_bold:      700;
 $font-weight_heavy:     800;
 $font-weight_black:     900;
 
-$font-size_base:        1.325rem;
-$font-size_small:       0.8rem;
+$font-size_20:        1.25rem;
+$font-size_16:        1rem;
+$font-size_14:        0.875rem;
+$font-size_12:        0.75rem;
 
-$leading:               1.6;
+$leading-squished: 1;
+$leading-tight:    1.25;
+$leading:          1.5;
+$leading-roomy:    1.66;
+$leading-spacious: 2;
 
 // Family stacks
-$font-family_secondary: "leitura-news", "Georgia", "Times New Roman", serif;
+$font-family_mono: "Courier Prime", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$font-family_secondary: "source-serif-pro", "Georgia", "Times New Roman", serif;
 $font-family_primary:   "ARS Maquette", "ars-maquette-web", "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-family_body: $font-family_secondary;
 $font-family_head: $font-family_primary;
+$font-family_accent: $font-family_mono;
+
+%ligatures {
+  font-variant-ligatures: discretionary-ligatures;
+  -moz-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
 
 /**
  * Site-wide typographic styles
@@ -37,7 +52,7 @@ $font-family_head: $font-family_primary;
 
 // Body
 html {
-  font-family: $font-family_primary;
+  font-family: $font-family_body;
   line-height: $leading;
 }
 
@@ -48,6 +63,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $font-family_head;
 }
 
 h2 {
@@ -70,100 +86,46 @@ h3 {
   ol,
   figure,
   figcaption {
+    font-size: $font-size_20;
     font-family: $font-family_secondary;
     color: $color_text;
+    line-height: $leading-roomy;
   }
 }
 
-p:not(:only-child),
-ul:not(:only-child),
-ol:not(:only-child) {
-  margin-bottom: 2rem;
-}
+// Body text /*
+.post_content {
+  p, ul, ol {
+    font-size: 1.25rem !important;
 
-blockquote {
-  margin-left: 4rem;
-  font-style: italic;
-}
+    @media screen and (min-width: 1550px) {
+      font-size: 1.45rem;
+    }
 
-// Body text
-.page_content p,
-.post_content p,
-.page_content ul,
-.post_content ul,
-.page_content ol,
-.post_content ol,  {
-  font-size: $font-size_base;
-
-  @media screen and (min-width: 1550px) {
-    font-size: $font-size_base * 1.16;
-  }
-
-  @media screen and (max-width: 550px) {
-    font-size: $font-size_base * 0.9;
-  }
-}
-
-@keyframes animatedBackground {
-  0%   { background-position: 20% bottom; }
-  100% { background-position: 90% bottom; }
-}
-
-.page_content p,
-.post_content p,
-.page_content ul,
-.post_content ul,
-.page_content h2,
-.post_content h2,
-.page_content h3,
-.post_content h3,
-.page_content .media,
-.post_content .media,
-.page_content figure,
-.post_content figure,
-.page_content figcaption,
-.post_content figcaption {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page_content p,
-.post_content p,
-.page_content ul,
-.post_content ul,
-.page_content h2,
-.post_content h2,
-.page_content h3,
-.post_content h3,
-.media,
-figure,
-figcaption,
-.site_content .post_blurb {
-  a {
-    font-size: 95%;
-    background-image: url('../img/line.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: 40% bottom;
-    padding-bottom: 1px;
-    color: inherit;
-    font-weight: $font-weight_bold;
-    &:nth-of-type(2) {
-      background-position: 60% bottom;
-  }
-    &:hover, &:focus {
-      animation: animatedBackground 2.5s linear infinite;
-      color: #4EC4C1;
+    @media screen and (max-width: 550px) {
+      font-size: 1.125rem;
     }
   }
 }
 
-
-// Links
-.site_content a {
+%link-line {
+  font-size: 90%;
   font-weight: $font-weight_bold;
   font-family: $font-family_primary;
-  color: $color_text;
+  padding-bottom: 0.5px;
+  color: inherit;
+  background-image: url('../img/line.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 40% bottom;
+  &:nth-of-type(2) {
+    background-position: 60% bottom;
+  }
+  &:hover, &:focus {
+    color: darken($color_primary, 10%);
+    animation: animatedBackground 4s linear infinite;
+  }
+  @extend %ligatures;
   transition: color 80ms ease-in-out,
               fill 100ms ease-in-out,
               opacity 100ms ease-in-out,
@@ -171,9 +133,15 @@ figcaption,
               background 100ms ease-in-out,
               box-shadow 150ms ease-in-out,
               border 150ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  &:hover, &:focus {
-    color: darken($color_primary, 10%);
-  }
+}
+
+@keyframes animatedBackground {
+  0%   { background-position: 20% bottom; }
+  100% { background-position: 90% bottom; }
+}
+
+p a {
+  @extend %link-line;
 }
 
 .site_content a.button {
@@ -208,7 +176,8 @@ hr:after {
 // Silent classes
 %small-caps {
   font-family: $font-family_head;
-  font-size: $font-size_small;
+  @extend %ligatures;
+  font-size: $font-size_14;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
@@ -216,7 +185,35 @@ hr:after {
 strong {
   @extend %small-caps;
   background-color: $color_gray-100;
-  font-size: 1rem;
+  font-size: $font-size_14;
   padding: 3px 6px 5px 8px;
   margin-right: .25rem;
+}
+
+%no-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.screen-reader-context {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+pre {
+  padding-top: $spacer-4;
+  padding-bottom: $spacer-4;
+  background: var(--color-gray-dim-6);
 }

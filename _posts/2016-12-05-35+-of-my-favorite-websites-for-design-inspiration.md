@@ -2,7 +2,7 @@
 layout: post
 title: 35+ of my favorite websites for design inspiration
 permalink: 2016/35-of-my-favorite-websites-for-design-inspiration.html
-description: Where I go when I want to populate a moodboard, keep on top of the best of what’s happening around me, or look at beautiful work.
+description: Where I go when I want to populate a moodboard and keep on top of the best of what’s happenining in design.
 categories:
  - Design
  - Tips and tricks

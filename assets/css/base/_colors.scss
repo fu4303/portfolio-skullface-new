@@ -17,19 +17,56 @@
   --color-cerulean-deep:   #0880A1;
   
   // Monochrome
-  --color-gray-900:        #0C0014; 
-  --color-gray-800:        #22162D;
-  --color-gray-700:        #291D35; // additional shade
-  --color-gray-600:        #352944;
-  --color-gray-500:        #413751;
-  --color-gray-400:        #4C435B; // additional shade
-  --color-gray-350:        #746F89; // additional shade
-  --color-gray-300:        #8D88A3;
-  --color-gray-200:        #B8B1C9;
-  --color-gray-100:        #D8D5E2; // additional shade
-  --color-gray-000:        #FFF;
-  
+  --color-gray-900:        #030005;
+  --color-gray-800:        #191320;
+  --color-gray-700:        #231D29;
+  --color-gray-600:        #393440;
+  --color-gray-500:        #514C59;
+  --color-gray-400:        #6B6673;
+  --color-gray-300:        #85818E;
+  --color-gray-200:        #A19DA9;
+  --color-gray-100:        #BDBAC6;
+  --color-gray-000:        #D8D5E2;
+
+   
   --color-black:           var(--color-gray-900);
-  --color-gray:            var(--color-gray-500);
-  --color-white:           var(--color-gray-000);
+  --color-white:           #fff;
+}
+
+:root[data-theme="light"] {
+  --color-bg:               var(--color-white);
+  --color-text:             var(--color-black);
+  
+  --color-gray:             var(--color-gray-500);
+  
+  --color-gray-bright-1:    var(--color-gray-600);
+  --color-gray-bright-2:    var(--color-gray-700);
+  --color-gray-bright-3:    var(--color-gray-800);
+  --color-gray-bright-4:    var(--color-gray-800);
+
+  --color-gray-dim-1:       var(--color-gray-400);
+  --color-gray-dim-2:       var(--color-gray-300);
+  --color-gray-dim-3:       var(--color-gray-200);
+  --color-gray-dim-4:       var(--color-gray-100);
+  --color-gray-dim-5:       var(--color-gray-000);
+  --color-gray-dim-6:       #EBEAF1;
+}
+
+:root[data-theme="dark"] {
+  --color-bg:            var(--color-black);
+  --color-text:          var(--color-white);
+  
+  --color-gray:          var(--color-gray-300);
+  
+  --color-gray-bright-1:    var(--color-gray-200);
+  --color-gray-bright-2:    var(--color-gray-100);
+  --color-gray-bright-3:    var(--color-gray-000);
+  --color-gray-bright-4:    var(--color-gray-000);
+
+  --color-gray-dim-1: var(--color-gray-400);
+  --color-gray-dim-2: var(--color-gray-500);
+  --color-gray-dim-3: var(--color-gray-600);
+  --color-gray-dim-4: var(--color-gray-700);
+  --color-gray-dim-5: var(--color-gray-800);
+  --color-gray-dim-6: var(--color-gray-900);
 }

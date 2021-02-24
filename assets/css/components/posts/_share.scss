@@ -1,0 +1,30 @@
+// Social share links
+.post_social_links {
+  display: inline-block;
+  @extend %no-list;
+  line-height: 1;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+  
+  svg {
+    width: $spacer-1 * 1.5;
+    height: $spacer-1 * 1.5;
+    fill: $color_text;
+  }
+}
+
+@each $social-link, $fill in $social-links {
+  li.#{$social-link} a:hover svg {
+    fill: $fill;
+  }
+}

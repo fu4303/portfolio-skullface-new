@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 10 gorgeous web fonts and their free Google Font alternatives
-description: Ten beautiful, versatile type families from expert type foundries and ten corresponding Google Fonts to use for free.
+description: Ten beautiful, versatile type families and ten corresponding Google Fonts to use for free.
 categories:
  - Design
  - Tips and tricks

@@ -5,6 +5,7 @@ description: Some of my absolute favorite artists and friends with varying style
 categories:
  - Illustration
  - Representation
+published: false
 image: woc-nboc-artists.jpg
 ---
 

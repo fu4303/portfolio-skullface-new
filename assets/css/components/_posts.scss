@@ -13,8 +13,10 @@
 .post_header {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   min-height: 260px;
+  margin-bottom: $spacer-6;
   background-color: $color_black;
   background-size: cover;
   background-position: center center;
@@ -29,7 +31,7 @@
     height: 100%;
     background-image: linear-gradient($color_primary, $color_primary);
     background-blend-mode: multiply;
-    opacity: 0.85;
+    opacity: 0.8;
   }
 }
 
@@ -46,7 +48,7 @@
 
   @media screen and (min-width: 800px) {
     max-width: 56rem;
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
 
   span {
@@ -58,28 +60,28 @@
   }
 }
 
+.post_meta,
 .post_title {
   position: relative;
-  top: 1rem;
-  margin-top: 1rem;
+  top: 2rem;
 }
-
 
 /**
  * Body content
 **/
 
+.post_container {
+  margin-bottom: $spacer-6 * 1.5;
+}
+
 // Containers and element spacing
 .post_content {
-  margin-top: $spacer;
+  margin-top: $spacer-1;
 }
 
 .post_content .media {
-  margin-bottom: $spacer/2;
-}
-
-.post_content ul li {
-  margin-bottom: $spacer/3;
+  margin-top: $spacer-4;
+  margin-bottom: $spacer-6;
 }
 
 .align-left {
@@ -136,10 +138,6 @@ p span.align-half:last-child {
   @media screen and (max-width: 550px) {
     padding: 0;
   }
-}
-
-.instagram-block iframe {
-  margin: 0 auto !important;
 }
 
 
@@ -301,177 +299,34 @@ p.br {
 **/
 
 .post_meta {
-  text-align: center;
-  margin-top: $spacer;
-  margin-left: auto;
-  margin-right: auto;
-  p {
-    @extend %small-caps;
-    font-family: $font-family_primary;
-    margin-bottom: 0.5rem;
+  @extend %container;
+  margin-bottom: $spacer-6 + $spacer-1;
+  font-size: $font-size_16;
+  font-family: $font-family_accent;
+  color: var(--color-gray-dim-1);
+  @media screen and (min-width: 700px) {
+    text-align: center;
   }
 }
 
 // Categories listing
-.post_category {
-  &:after {
-    content: "/";
-  }
-  &:after {
-    margin-left: .5rem;
-    margin-right: .5rem;
-  }
-}
-
-// Social share links
-ul.post_social-share {
-  margin-top: $spacer/4;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: $font-size_small;
+.post_categories {
+  display: inline;
   @extend %no-list;
+  margin-bottom: $spacer-1;
 }
 
-  .post_social-share li {
-    display: inline-block;
-    &:not(:last-child) {
-      margin-right: 0.5rem;
-    }
-  }
-
-  .post_social-share svg {
-    position: relative;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-top: -3px;
-    margin-right: 2px;
-    margin-left: 1px;
-    vertical-align: middle;
-    fill: $color_text;
-  }
-
-  .post_social-share a {
-    display: inline-block;
-    border-radius: 3px;
-    border: 2px solid $color_gray-100;
-    padding: 4px 9px;
-    &:hover {
-      color: $color_text;
-      border-color: $color_primary;
-    }
-  }
-
-    @each $social-link, $fill in $social-links {
-      li.#{$social-link} a:hover svg {
-        fill: $fill;
-      }
-    }
-
-
-// Pagination
-.related-posts_container {
-  margin-top: $spacer;
-  padding-top: $spacer;
-  padding-bottom: $spacer;
-  background: $color_gray-850;
-  color: $color_white;
-}
-
-.related-posts {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-left: auto;
-  margin-right: auto;
+.post_category {
+  display: inline-block;
+  color: var(--color-gray-dim-1);
+  font-size: $font-size_14;
   a {
-    color: $color_white;
-  }
-  @media screen and (max-width: 1000px) {
-    flex-wrap: wrap;
-  }
-  & > * {
-    width: 25%;
-    @media screen and (min-width: 1000px) {
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-    }
-    @media screen and (max-width: 1000px) {
-      margin-bottom: $spacer/2;
-    }
-    @media screen and (min-width: 600px) and (max-width: 1000px) {
-      width: calc(50% - 2rem);
-      &:nth-of-type(-n+2) {
-        margin-bottomt: $spacer/2;
-      }
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    .related-posts_heading {
-      display: flex;
-      align-items: center;
-      margin-right: 1rem;
-      margin-bottom: 0;
+    font-weight: $font-weight_bold;
+    @extend %small-caps;
+    color: $color_black;
+    &:hover,
+    &:focus {
+      color: var(--color-purple);
     }
   }
 }
-
-  .point {
-    @media screen and (max-width: 600px) {
-      display: inline-block;
-      transform: rotate(90deg);
-    }
-  }
-
-  a.related-posts_post {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 2rem;
-    text-align: center;
-    border-radius: 3px;
-    border: solid 2px $color_gray-500;
-    transition: transform 160ms cubic-bezier(0.65, 0.05, 0.36, 1);
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: luminosity;
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient($color_primary, $color_primary);
-      background-blend-mode: multiply;
-      border-radius: 3px;
-      opacity: 0.0;
-    }
-    &:hover {
-      transform: scale(1.05);
-      border-color: $color_primary;
-      &:after {
-        opacity: 0.85;
-      }
-    }
-  }
-
-  .related-posts_post h4 {
-    z-index: 4;
-    line-height: 1.4;
-    span {
-      padding: 0.2rem;
-      box-shadow: 5px 0 0 $color_text, -5px 0 0 $color_text;
-      background: $color_text;
-      color: $color_white;
-      @extend %small-caps;
-    }
-  }

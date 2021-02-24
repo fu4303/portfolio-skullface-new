@@ -1,6 +1,7 @@
 ---
-layout:     post
-title:      "Year In review: 2015"
+layout: post
+title: "Year In review: 2015"
+published: false
 permalink: "2015/year-in-review-2015.html"
 categories:
   - Life and health
@@ -19,7 +20,7 @@ image: 2015.jpg
 </ul><h2>February</h2>
 <ul><li>decided to start the small business of my dreams, selling accessories and shirts</li>
   <li>joined the best ever backchannel community of ferocious &amp; beautiful women in tech</li>
-  <li>realigned <a href="http://Fjessicapaoli.com%">jessicapaoli.com</a></li>
+  <li>realigned <a href="http://Fskullface.me%">skullface.me</a></li>
 </ul><h2>March</h2>
 <ul><li>bought <a href="http://falseluck.com">falseluck.com</a> domain to start hacking on the dream small biz</li>
   <li>started looking for a new full-time job, have a couple interviews that lead no where</li>
@@ -64,7 +65,7 @@ image: 2015.jpg
 <ul><li>Kickstarter campaign failed at 23% of funding goal</li>
   <li><a href="http://twitch.tv/skvllface">started livestreaming my practice</a></li>
   <li><a href="http://patreon.com/skvllface">launched Patreon campaign</a></li>
-  <li>realigned <a href="http://jessicapaoli.com/">jessicapaoli.com</a> again</li>
+  <li>realigned <a href="http://skullface.me/">skullface.me</a> again</li>
   <li>running out of savings &amp; running high on anxiety</li>
   <li>cut ties with potential clients, leads, jobs because I was too scared to function</li>
   <li>like, lots of anxiety</li>

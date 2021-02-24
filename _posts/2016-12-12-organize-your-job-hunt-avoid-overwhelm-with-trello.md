@@ -3,7 +3,7 @@ layout: post
 title: Organize your job hunt &amp; avoid overwhelm with Trello
 description: Stay on top of your next job search and avoid getting overwhelmed with this plug &amp; play system on Trello.
 categories:
- - Job hunting and interviewing
+ - Career growth
  - Tips and tricks
 image: trello-job-hunt_board.jpg
 ---

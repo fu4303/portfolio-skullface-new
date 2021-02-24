@@ -4,7 +4,7 @@ title: What jobs can I get as a designer?
 description: 12 roles that tech + advertising companies are looking for. There’s an abundance of design work to be done across the world, for good and evil.
 categories:
  - Design
- - Job hunting and interviewing
+ - Career growth
 image: designer-jobs_1.jpg
 ---
 {% capture imagepath %}{{ site.url }}/{{ site.baseurl }}{{ site.mediapath.post }}{{ page.date | date: '%Y' }}/jessicapaoli-dot-com_{{ page.image }}{% endcapture %}
