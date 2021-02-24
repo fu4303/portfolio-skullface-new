@@ -11,9 +11,9 @@ title: Contact
   </div>
 </section>
 
-**One-on-one design** Interested in working one-on-one for a design, illustration, or development consultation? Please <a href="http://grawlix.co/?utm_source=jp-contact">visit my studio at Grawlix.co</a> to contact Rocco and me!
+**One-on-one design** I’m accepting art and illustration projects for select clients. I’m currently not taking on brand or development work.
 
-**Mentorship** For design, code, biz, or life advice, feel free to hit me up for help. There’s a good chance you’re wondering about the same thing someone else is, so, ask away! Design students, recent grads, and those early in their career: If you are a person from an underrepresented minority group (women &amp; marginalized genders, POC, queer folx, PWD) looking for a design mentor, I’d love to talk with you.
+**Mentorship** For design, code, biz, or life advice, feel free to hit me up for help. There’s a good chance you’re wondering about the same thing someone else is, so, ask away! Design students, recent grads, and those early in their career: If you are a person from an underrepresented minority group (women and non-binary folks in tech, BIPOC in America, LGBTQ+ people, persons with disabilites) looking for a design mentor, I’d love to talk with you.
 
 **Men who brain-pick** I won’t respond to requests from male professionals who want to use my time to “pick my brain” on design or business over email, Skype, or coffee. Women perform more than enough unrecognized, unpaid [emotional labor](http://www.metafilter.com/151267/Wheres-My-Cut-On-Unpaid-Emotional-Labor) for me to offer you individualized attention for free. To schedule a paid consultation, please send me a note.
 
