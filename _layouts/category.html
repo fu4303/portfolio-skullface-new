@@ -12,16 +12,12 @@ layout: default
   </div>
 {% endif %}
 
-{% unless page.content == '' %}
+{% unless page.content == "" %}
   <p>{{ page.content }}</p>
-{% endunless %}
-
-{% unless site.categories.[page.category] | size > 0 %}
-  <p>Oops! There aren’t any posts in this category.</p>
 {% endunless %}
 
 <div class="posts posts_all">
   {% for post in site.categories.[page.category] %}
-  {% include post-card.html %}
+    {% include posts/preview.html %}
   {% endfor %}
 </div>
