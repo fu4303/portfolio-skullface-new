@@ -1,42 +1,34 @@
 /* Header + Navigation */
 
-.site_header {
+.Header {
   padding: 1rem 10%;
   margin: 0 auto;
-}
-
-.header_navigation {
-  @extend %no-list;
-  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
   @extend %small-caps;
   font-weight: $font-weight_bold;
-  font-size: $font-size_small;
 }
 
-  .header_logo {
-    height: 50px;
-    fill: $color_primary;
-    &:hover, &:focus {
-      fill: $color_text;
-    }
-  }
+.intro .Header {
+  background: transparent;
+}
 
-  .header_navigation li {
-    display: inline-block;
-    &:not(:last-of-type) {
-      margin-right: 2rem;
-    }
+.Header__nav a {
+  display: inline-block;
+  &:first-of-type {
+    margin-right: $spacer-5;
   }
+  color: $color_text;
+  &:hover,
+  &:focus {
+    color: $color_primary-dark;
+  }
+}
 
-  .header_navigation a {
-    color: $color_text;
-    &:hover,
-    &:focus {
-      color: $color_primary-dark;
-    }
-  }
+.Header__logo {
+  display: block;
+  width: $spacer-4 * 2;
+  margin-left: $spacer-5;
+  margin-right: $spacer-5;
+}
