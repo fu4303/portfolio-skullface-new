@@ -76,7 +76,11 @@ $responsive-variants: (
 }
 
 %margin-bottom-spacious {
-  margin-bottom: $spacer-8;
+  margin-bottom: $spacer-6;
+}
+
+%margin-top {
+  margin-top: $spacer-8;
 }
 
 // Layout utilities

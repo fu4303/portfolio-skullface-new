@@ -46,11 +46,7 @@
   </script>
 </head>
 
-{% if page.layout == 'post' %}
-<body class="body_post">
-{% else %}
-<body>
-{% endif %}
+<body class="App_{% if page.is_post %}post{% else %}page{% endif %}">
 
 {% if page.layout != 'home' %}
   {% include nav.html %}

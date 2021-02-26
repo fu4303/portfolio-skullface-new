@@ -1,13 +1,21 @@
 /* Header + Navigation */
 
 .Header {
-  padding: 1rem 10%;
-  margin: 0 auto;
+  @extend %contain;
+  padding-top: $spacer-2;
   display: flex;
   justify-content: center;
   align-items: center;
   @extend %small-caps;
   font-weight: $font-weight_bold;
+}
+
+.App_page .Header {
+  @extend %margin-bottom-spacious;
+}
+
+.App_post .Header {
+  padding-bottom: $spacer-2;
 }
 
 .intro .Header {
