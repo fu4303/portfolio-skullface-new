@@ -105,6 +105,10 @@ h3 {
     @media screen and (max-width: 550px) {
       font-size: 1.125rem;
     }
+    
+    a {
+      @extend %link-line;
+    }
   }
 }
 
@@ -138,10 +142,6 @@ h3 {
 @keyframes animatedBackground {
   0%   { background-position: 20% bottom; }
   100% { background-position: 90% bottom; }
-}
-
-p a {
-  @extend %link-line;
 }
 
 .site_content a.button {
