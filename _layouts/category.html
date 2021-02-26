@@ -17,7 +17,7 @@ layout: default
 {% endunless %}
 
 <div class="posts posts_all">
-  {% for post in site.categories.[page.category] %}
+  {% for post in site.categories[page.category] %}
     {% include posts/preview.html %}
   {% endfor %}
 </div>

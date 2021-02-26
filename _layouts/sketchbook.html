@@ -1,7 +1,7 @@
 {% include header.html %}
 
 <div class="sketchbook_sketches">
-  {% assign sorted = (site.sketches | sort: 'date') | reverse %}
+  {% assign sorted = site.sketches | sort: 'date' | reverse %}
   {% for sketch in sorted %}
   <article class="sketchbook_sketch">
       {{ sketch.content }}
