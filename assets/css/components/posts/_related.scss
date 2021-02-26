@@ -1,7 +1,6 @@
 // Pagination
 .related-posts_container {
   @extend %container-wide;
-  margin-bottom: $spacer-6 * 2;
   
   p.post_meta {
     top: 0;

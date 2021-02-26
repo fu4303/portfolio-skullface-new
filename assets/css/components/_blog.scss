@@ -1,1 +1,47 @@
 /* Blog */
+.posts_all {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  @extend %contain;
+  @extend %margin-top;
+}
+
+.posts_all .post_preview {
+  text-align: center;
+  
+  @media screen and (min-width: 750px) and (max-width: 1333px) {
+    width: calc(50% - 3em);
+    &:nth-of-type(odd) {
+      margin-right: 3.33rem;
+    }
+  }
+
+  @media screen and (min-width: 1333px) {
+    width: calc(33% - 2rem);
+    &:not(:nth-of-type(3n+0)) {
+      margin-right: 3.33rem;
+    }
+  }
+
+  .post_preview_image {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    min-height: 14rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .post_blurb {
+    margin: $spacer-2;
+    @media screen and (min-width: 780px) {
+      margin: $spacer-4;
+    }
+  }
+}
+
