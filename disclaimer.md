@@ -5,7 +5,7 @@ title: Disclaimer
 
 ## Informational purposes only
 
-All materials on on skullface.me are for informational purposes only and are not intended to be a substitute for legal, mental health, financial, business, etc. advice. By viewing this website and its content, including but not limited to, products, programs, services, classes, workshops, e-books, consultations, opt-in gifts, you are agreeing to accept all parts of this disclaimer and skullface.me’s [terms of service and privacy policy](/legal).
+All materials on on skullface.me are for informational purposes only and are not intended to be a substitute for legal, mental health, financial, business, etc. advice. By viewing this website and its content, including but not limited to, products, programs, services, classes, workshops, e-books, consultations, opt-in gifts, you are agreeing to accept all parts of this disclaimer and skullface.me’s [terms and policy](/legal).
 
 ## Affiliation
 
