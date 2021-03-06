@@ -1,58 +1,74 @@
 ---
 title: About
+description: "Interdisciplinary designer, visual artist, and programmer fighting for love and justice."
 layout: page
 permalink: /about/
 ---
 
-# Design babe dual-wielding compassion and cuteness
+Hihi, nice to meet you! (*＾▽＾)／ I’m skullface (she/her) and I’m a **Design Engineer dual-wielding compassion and cuteness**, using my interdisciplinary background to make positive impact and leave a trail of glitter in my wake.
 
-Hihi, nice to meet you! (*＾▽＾)／ I’m skullface (she/her), an interdisciplinary designer, visual artist, and programmer fighting for love and justice.
+## Design philosophy
+As a tween who liked playing on the computer more than playing outside, I fell in love with design as soon as I found out it had a name. I practice design as code, as strategy, as content, as experience, as visual expression — as the native medium of the world wide web. I’m a <dfn title="Hybrid Designer and Front-End Engineer, formerly referred to as a “unicorn”">Design Engineer</dfn> with a focus on growth, inclusivity, and operations (&hearts; accessibility, representation, clear async comms, marketing 📈, codifying and re-calibrating processes, and great documentation). Design can’t save the world, but we have an immense responsibility as technology practicioners to _do the most good_ as we serve business goals.
 
-## Values
+<div class="values-and-practices">
+  <ul class="">
+    <li>
+      <div class="value-arrow">
+        <span class="value">
+          Clarity
+        </span>
+        <span class="leads-to" aria-label="through">
+        </span>
+      </div>
+      <span class="practice">
+        Showing AND telling
+      </span>
+    </li>
+    <li>
+      <div class="value-arrow">
+        <span class="value">
+          Inclusivity
+        </span>
+        <span class="leads-to" aria-label="through">
+        </span>
+      </div>
+      <span class="practice">
+        Proactive advocacy
+      </span>
+    </li>
+    <li>
+      <div class="value-arrow">
+        <span class="value">
+          Intention
+        </span>
+        <span class="leads-to" aria-label="through">
+        </span>
+      </div>
+      <span class="practice">
+          Leading with purpose
+      </span>
+    </li>
+    <li>
+      <div class="value-arrow">
+        <span class="value">
+          Openness
+        </span>
+        <span class="leads-to" aria-label="leads to">
+        </span>
+      </div>
+      <span class="practice">
+        Removing barriers to entry
+      </span>
+    </li>
+  </ul>
+</div>
 
-```
-poo
-```
-
-- Irreverance
-- Clarity
-- Liberation
-
-## This or that
-
-| Yum | Yuck |
-| --- | --- |
-| Saturated colors | x |
-| Sparkles | x |
-| My cat | x |
-| Video games | x | 
-| K-pop | x |
-| Beauty | x |
-
-## Career bucket list
-
-- 
-- Dream project: Editorial art
-- Dream client: K-pop music label
-
-## Recognition
-- The Secret Loves of Geek Girls: Redux\
-  contributing author + artist, 2018
-- Cards Against Humanity SDCC zine\
-  contributing artist, 2017
-- The Secret Loves of Geek Girls\
-  contributing artist, 2016
-- Moon Prism Power at The Galallery, San Francisco\
-  featured artist, 2016
-- Dribbble\
-  Timeout interview, 2016
-- W3 Award\
-  gold award for web design, 2015
-- Kickstarter\
-  Fashion campaign feature + Staff Pick, 2015
-- Bit Bash Chicago\
-  featured artist, 2014
-- Ink Wars\
-  participating artist, 2013
-- Weapons of Mass Creation IV\
-  eatured designer, 2013
+<div class="recognition-container">
+  <div class="recognition">
+    <h2>
+      Recognition and publication
+    </h2>
+    
+    {% include about/recognition.html %}
+  </div>
+</div>
