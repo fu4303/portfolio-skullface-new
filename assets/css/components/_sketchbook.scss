@@ -2,22 +2,32 @@
 
 .sketchbook_sketches {
    margin: 2rem auto;
-   width: 95%
+   width: 95%;
+   column-count: 4;
+   @media only screen and (max-width: 1000px) {
+      column-count: 3;
+   }
+   @media only screen and (max-width: 601px) {
+      column-count: 2;
+   }
+   column-gap: $spacer-1;
 }
 
-.sketchbook_sketch {
-   width: 95%;
+.sketchbook_sketches img {
+   max-width: 100%;
+   display: block;
+}
+
+.sketchbook_sketches p {
+   margin: 0;
+   display: grid;
+   grid-template-rows: 1fr auto;
+   margin-bottom: 10px;
+   break-inside: avoid;
    text-align: center;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 999px) {
-   .sketchbook_sketch {
-       width: 49%
-   }
-}
-
-@media only screen and (min-width: 1000px) {
-   .sketchbook_sketch {
-       width: 33%
-   }
+.sketchbook_sketches p > img {
+   grid-row: 1 / -1;
+   grid-column: 1;
 }
