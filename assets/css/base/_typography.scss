@@ -19,6 +19,10 @@ $font-weight_bold:      700;
 $font-weight_heavy:     800;
 $font-weight_black:     900;
 
+$font-size_48:        3rem;
+$font-size_32:        2rem;
+$font-size_28:        1.75rem;
+$font-size_22:        1.375rem;
 $font-size_20:        1.25rem;
 $font-size_16:        1rem;
 $font-size_14:        0.875rem;
@@ -31,9 +35,9 @@ $leading-roomy:    1.66;
 $leading-spacious: 2;
 
 // Family stacks
-$font-family_mono: "Courier Prime", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,sans-serif, Apple Color Emoji, Segoe UI Emoji;
-$font-family_secondary: "source-serif-pro", "Georgia", "Times New Roman", serif;
-$font-family_primary:   "ARS Maquette", "ars-maquette-web", "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family_mono: "Courier Prime", "ARS Maquette", "ars-maquette-web", "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$font-family_secondary: "Source Serif Pro", "Georgia", "Times New Roman", serif;
+$font-family_primary: "ARS Maquette", "ars-maquette-web", "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-family_body: $font-family_secondary;
 $font-family_head: $font-family_primary;
@@ -64,6 +68,8 @@ h4,
 h5,
 h6 {
   font-family: $font-family_head;
+  line-height: $leading-tight;
+  color: var(--color-text);
 }
 
 h2 {
@@ -73,10 +79,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  margin-bottom: $spacer-2;
   font-weight: $font-weight_normal;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
+  font-size: $font-size_28;
 }
 
 // Paragraphs
@@ -88,24 +93,17 @@ h3 {
   figcaption {
     font-size: $font-size_20;
     font-family: $font-family_secondary;
-    color: $color_text;
+    color: var(--color-text);
     line-height: $leading-roomy;
+    @media screen and (min-width: 1300px) {
+      font-size: $font-size_22;
+    }
   }
 }
 
 // Body text /*
 .post_content {
   p, ul, ol {
-    font-size: 1.25rem !important;
-
-    @media screen and (min-width: 1550px) {
-      font-size: 1.45rem;
-    }
-
-    @media screen and (max-width: 550px) {
-      font-size: 1.125rem;
-    }
-    
     a {
       @extend %link-line;
     }
@@ -126,7 +124,7 @@ h3 {
     background-position: 60% bottom;
   }
   &:hover, &:focus {
-    color: darken($color_primary, 10%);
+    color: var(--color-purple-bright);
     animation: animatedBackground 4s linear infinite;
   }
   @extend %ligatures;
@@ -144,9 +142,15 @@ h3 {
   100% { background-position: 90% bottom; }
 }
 
+a:focus {
+  outline: 3px solid var(--color-purple-dim);
+  outline-offset: $spacer-half;
+  color: var(--color-purple-brighter);
+}
+
 .site_content a.button {
   &:hover, &:focus {
-    color: $color_text;
+    color: var(--color-text);
   }
 }
 
@@ -155,11 +159,11 @@ h3 {
   height: 10px;
   position: relative;
   top: -4px;
-  fill: $color_gray-300;
+  fill: var(--color-gray-dim-4);
 }
 
 a:hover .external-link {
-  fill: $color_primary;
+  fill: var(--color-purple);
 }
 
 // Horizontal rule
@@ -175,19 +179,16 @@ hr:after {
 
 // Silent classes
 %small-caps {
+  font-weight: $font-weight_bold;
+  font-size: $font-size_14;
   font-family: $font-family_head;
   @extend %ligatures;
-  font-size: $font-size_14;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
 strong {
-  @extend %small-caps;
-  background-color: $color_gray-100;
-  font-size: $font-size_14;
-  padding: 3px 6px 5px 8px;
-  margin-right: .25rem;
+  font-family: $font-family_head;
 }
 
 %no-list {
@@ -216,4 +217,8 @@ pre {
   padding-top: $spacer-4;
   padding-bottom: $spacer-4;
   background: var(--color-gray-dim-6);
+}
+
+dfn {
+  text-decoration: underline dotted var(--color-gray-dim-2) 1px;
 }
