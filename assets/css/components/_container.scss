@@ -16,7 +16,7 @@
   pre,
   table,
   .contact_form_container {
-    margin-bottom: $spacer-4;
+    margin-bottom: $spacer-3;
   }
   
   li {
@@ -52,9 +52,9 @@
 
 %container {
   @extend %contain;
-  max-width: 40rem;
+  max-width: 41rem;
   @media screen and (min-width: 1300px) {
-    max-width: 44rem;
+    max-width: 45rem;
   }
 }
 

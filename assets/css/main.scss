@@ -16,12 +16,12 @@ Author: @skullface
 */
 
 @import 'base/reset',
-        'base/colors.config',
         'base/colors',
         'base/spacing',
-        'base/typography.config',
+        'base/typography',
         'base/forms',
 
+        'components/layout',
         'components/container',
         'components/header',
         'components/footer',
@@ -35,6 +35,7 @@ Author: @skullface
         'components/posts/related',
 
         'components/home',
+        'components/about',
         'components/contact',
         'components/downloads',
         'components/sketchbook',
