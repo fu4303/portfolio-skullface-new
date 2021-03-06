@@ -17,7 +17,7 @@
   justify-content: flex-end;
   min-height: 260px;
   margin-bottom: $spacer-6;
-  background-color: $color_black;
+  background-color: var(--color-text);
   background-size: cover;
   background-position: center center;
   background-blend-mode: luminosity;
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient($color_primary, $color_primary);
+    background-image: linear-gradient(var(--color-purple), var(--color-purple));
     background-blend-mode: multiply;
     opacity: 0.8;
   }
@@ -43,27 +43,26 @@
   margin-right: auto;
   text-align: center;
   font-weight: $font-weight_bold;
-  font-size: 2rem;
+  font-size: $font-size_32;
   line-height: 1.3;
 
   @media screen and (min-width: 800px) {
     max-width: 56rem;
-    font-size: 3rem;
+    font-size: $font-size_48;
   }
 
   span {
     display: inline;
     padding: 0.15rem .2rem .5rem .2rem;
-    color: $color_white;
-    background: $color_black;
-    box-shadow: 10px 0 0 $color_black, -10px 0 0 $color_black;
+    color: var(--color-bg);
+    background: var(--color-text);
+    box-shadow: 10px 0 0 var(--color-text), -10px 0 0 var(--color-text);
   }
 }
 
-.post_meta,
 .post_title {
   position: relative;
-  top: 2rem;
+  top: $spacer-half;
 }
 
 /**
@@ -79,6 +78,61 @@
   margin-top: $spacer-1;
 }
 
+.post_meta {
+  @extend %container;
+  margin-bottom: $spacer-6 + $spacer-1;
+  font-size: $font-size_16;
+  font-family: $font-family_accent;
+  line-height: $leading-roomy;
+  color: var(--color-gray-dim-1);
+  @media screen and (min-width: 700px) {
+    text-align: center;
+  }
+}
+
+.site_content ul.post_categories_list {
+  display: inline;
+  @extend %no-list;
+  font-size: $font-size_14;
+  font-family: $font-family_accent;
+}
+
+.post_category {
+  display: inline-block;
+  color: var(--color-gray-dim-1);
+  a {
+    font-weight: $font-weight_bold;
+    @extend %small-caps;
+    color: var(--color-text);
+    &:hover,
+    &:focus {
+      color: var(--color-purple);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .post_content .media {
   margin-top: $spacer-4;
   margin-bottom: $spacer-6;
@@ -87,12 +141,12 @@
 .align-left {
   float: left;
   margin-left: 15% !important;
-  margin-right: 2rem !important;
+  margin-right: $spacer-4 !important;
 }
 
 .align-right {
   float: right;
-  margin-left: 2rem !important;
+  margin-left: $spacer-4 !important;
   margin-right: 15% !important;
 }
 
@@ -105,7 +159,7 @@
 
 .align-left, .align-right, .align-center {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer-2;
   height: auto;
 }
 
@@ -130,17 +184,15 @@ p span.align-half {
 }
 
 p span.align-half:first-child {
-  padding-right: 1rem;
+  padding-right: $spacer-2;
 }
 
 p span.align-half:last-child {
-  padding-left: 1rem;
+  padding-left: $spacer-2;
   @media screen and (max-width: 550px) {
     padding: 0;
   }
 }
-
-
 
 .widdo-smol {
   max-width: 260px;
@@ -164,8 +216,8 @@ p.br {
 .content-upgrade {
   max-width: 62rem;
   margin: $spacer auto;
-  color: $color_white;
-  background: $color_text;
+  color: var(--color-bg);
+  background: var(--color-text);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -195,7 +247,7 @@ p.br {
   }
 
 .segmentation a {
-  background: $color_white;
+  background: var(--color-bg);
 }
 
 .sign-up_form {
@@ -203,8 +255,8 @@ p.br {
   margin-right: auto;
   margin-bottom: 4rem;
   padding: 4rem 0.5rem;
-  background: $color_text;
-  color: $color_white;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 @media screen and (min-width: 960px) {
@@ -224,8 +276,8 @@ p.br {
 }
 
 .sign-up_form strong {
-  color: $color_text;
-  background: $color_primary;
+  color: var(--color-text);
+  background: var(--color-purple);
 }
 
 .sign-up_form form {
@@ -271,7 +323,6 @@ p.br {
   }
 }
 
-
 .sign-up_form.secondary {
   margin-bottom: 0;
   background: #fff;
@@ -281,52 +332,4 @@ p.br {
 .sign-up_form.secondary form,
 .page-template-template-courses .sign-up_form form {
   flex-direction: column;
-}
-
-
-
-/**
- * Footer
-**/
-
-/**
-.post_meta p a,
-.related-posts h3 a {
-  text-decoration: underline;
-  text-decoration-skip: ink;
-  text-decoration-color: $color_primary;
-}
-**/
-
-.post_meta {
-  @extend %container;
-  margin-bottom: $spacer-6 + $spacer-1;
-  font-size: $font-size_16;
-  font-family: $font-family_accent;
-  color: var(--color-gray-dim-1);
-  @media screen and (min-width: 700px) {
-    text-align: center;
-  }
-}
-
-// Categories listing
-.post_categories {
-  display: inline;
-  @extend %no-list;
-  margin-bottom: $spacer-1;
-}
-
-.post_category {
-  display: inline-block;
-  color: var(--color-gray-dim-1);
-  font-size: $font-size_14;
-  a {
-    font-weight: $font-weight_bold;
-    @extend %small-caps;
-    color: $color_black;
-    &:hover,
-    &:focus {
-      color: var(--color-purple);
-    }
-  }
 }

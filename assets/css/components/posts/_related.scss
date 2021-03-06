@@ -11,7 +11,7 @@
     text-align: center;
     a {
       @extend %small-caps;
-      color: $color_black;
+      color: var(--color-text);
       background: transparent;
       &:hover,
       &:focus {
@@ -61,16 +61,18 @@
         top: 0;
         display: block;
         margin-bottom: $spacer-1;
+        font-size: $font-size_20;
         font-family: $font-family_head;
         line-height: $leading-tight;
         text-align: left;
-        color: $color_text;
+        color: var(--color-text);
       }
         
       p {
         margin: 0;
         padding: 0;
         max-width: 100%;
+        font-size: $font-size_16;
       }
     }
   }

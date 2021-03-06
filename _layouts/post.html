@@ -12,14 +12,16 @@ layout: default
   </div>
 
   <div class="post_meta">
-    <span>
-      Filed in:  
-    </span>
-    <ul class="post_categories">
-      {% for category in page.categories %}
-      <li class="post_category"><a href="{{ site.baseurl }}/{{ category | slugify }}">{{ category }}</a>{% if forloop.last %}{% else %}, {% endif %}</li>
-      {% endfor %}
-    </ul>
+    <div class="post_categories">
+      <span>
+        Filed in:  
+      </span>
+      <ul class="post_categories_list">
+        {% for category in page.categories %}
+        <li class="post_category"><a href="{{ site.baseurl }}/{{ category | slugify }}">{{ category }}</a>{% if forloop.last %}{% else %}, {% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
     <div class="post_updated">
       Last updated: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
     </div>
