@@ -1,21 +1,25 @@
 ---
 layout: page
 title: Contact
+description: "If you’d like to get in touch with me, send a <a href='http://twitter.com/home?status=@skullface%20Hi!%20I%20wanted%20to%20say%20'>tweet</a> or an email at <code>meow@</code> this domain. 💌"
+permalink: contact
 ---
-<section class="contact_intro">
-  <figure>
-  </figure>
-  <div>
-    <h1 class="page_title"><span>{{ page.title }}</span></h1>
-    <p>If you’d like to get in touch with me, send a <a href="http://twitter.com/home?status=@skullface%20Hi!%20I%20wanted%20to%20say%20">tweet</a> or an email at <code>meow@</code> this domain. 💌</p>
-  </div>
-</section>
 
-**One-on-one design** I’m accepting art and illustration projects for select clients. I’m currently not taking on brand or development work.
+## One-on-one design
 
-**Mentorship** For design, code, biz, or life advice, feel free to hit me up for help. There’s a good chance you’re wondering about the same thing someone else is, so, ask away! Design students, recent grads, and those early in their career: If you are a person from an underrepresented minority group (women and non-binary folks in tech, BIPOC in America, LGBTQ+ people, persons with disabilites) looking for a design mentor, I’d love to talk with you.
+I’m currently taking on new art, design, and development projects with select clients, limited to…
 
-**Men who brain-pick** I won’t respond to requests from male professionals who want to use my time to “pick my brain” on design or business over email, Skype, or coffee. Women perform more than enough unrecognized, unpaid [emotional labor](http://www.metafilter.com/151267/Wheres-My-Cut-On-Unpaid-Emotional-Labor) for me to offer you individualized attention for free. To schedule a paid consultation, please send me a note.
+* orgs fostering equity for underrepresented folks in tech 👩‍💻
+* grassroots nonprofits with progressive missions 🌱
+* Sony, Square Enix, Nintendo, Bungie, HER Interactive 🎮
+* BlockBerry Creative, SM Entertainment, Big Hit Entertainment 💿
+* publications looking for editorial art 📰
+* Sanrio or Kakao Friends 🎀
+
+## Mentorship
+For design, code, biz, or life advice, feel free to hit me up for help. There’s a good chance you’re wondering about the same thing someone else is, so, ask away! Design students, recent grads, and those early in their career: If you are a person from an underrepresented minority group (women and non-binary folks in tech, BIPOC in America, LGBTQ+ people, persons with disabilites) looking for a design mentor, I’d love to talk with you.
+
+I won’t respond to requests from male professionals who want to use my time to “pick my brain” on design or business over email, Skype, or coffee. Women perform more than enough unrecognized, unpaid [emotional labor](http://www.metafilter.com/151267/Wheres-My-Cut-On-Unpaid-Emotional-Labor) for me to offer you individualized attention for free. To schedule a paid consultation, please send me a note.
 
 <div class="contact_form_container">
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
