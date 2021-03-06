@@ -1,41 +1,49 @@
+/**
+ *
+ * @group Colors
+ * Brand colors set as descriptive variables and functional variables as needed
+ *
+**/
+
 :root {
   // Primary
-  --color-purple:           #A542F0;
-  --color-purple-pale:      #B350FF;
-  --color-purple-deep:      #9129DF;
-  --color-purple-deeper:    #7513BE;
+  --color-purple:             #A542F0;
+  --color-purple-dim:         #B350FF;
+  --color-purple-bright:      #9129DF;
+  --color-purple-brighter:    #7513BE;
 
   // Secondary
-  --color-chartreuse:       #BEF70B;
-  --color-chartreuse-deep:  #677F1A;
+  --color-chartreuse:         #BEF70B;
+  --color-chartreuse-bright:  #677F1A;
 
   // Tertiary
-  --color-pink:            #FF1DBA;
-  --color-pink-pale:       #FFA6EE;
-  --color-pink-deep:       #E0009C;
-  --color-cerulean:        #06C8FC;
-  --color-cerulean-deep:   #0880A1;
+  --color-pink:               #FF1DBA;
+  --color-pink-dim:           #FFA6EE;
+  --color-pink-bright:        #E0009C;
+  --color-cerulean:           #06C8FC;
+  --color-cerulean-bright:    #0880A1;
   
   // Monochrome
-  --color-gray-900:        #030005;
-  --color-gray-800:        #191320;
-  --color-gray-700:        #231D29;
-  --color-gray-600:        #393440;
-  --color-gray-500:        #514C59;
-  --color-gray-400:        #6B6673;
-  --color-gray-300:        #85818E;
-  --color-gray-200:        #A19DA9;
-  --color-gray-100:        #BDBAC6;
-  --color-gray-000:        #D8D5E2;
+  --color-gray-900:           #030005;
+  --color-gray-850:           #0E0A13;
+  --color-gray-800:           #191320;
+  --color-gray-700:           #231D29;
+  --color-gray-600:           #393440;
+  --color-gray-500:           #514C59;
+  --color-gray-400:           #6B6673;
+  --color-gray-300:           #85818E;
+  --color-gray-200:           #A19DA9;
+  --color-gray-100:           #BDBAC6;
+  --color-gray-050:           #D8D5E2;
+  --color-gray-000:            ##EBEAF1;
 
-   
-  --color-black:           var(--color-gray-900);
-  --color-white:           #fff;
+  --color-black:              var(--color-gray-900);
+  --color-white:              #fff;
 }
 
 :root[data-theme="light"] {
-  --color-bg:               var(--color-white);
-  --color-text:             var(--color-black);
+  --color-bg:               #fff;
+  --color-text:             var(--color-gray-700);
   
   --color-gray:             var(--color-gray-500);
   
@@ -48,25 +56,40 @@
   --color-gray-dim-2:       var(--color-gray-300);
   --color-gray-dim-3:       var(--color-gray-200);
   --color-gray-dim-4:       var(--color-gray-100);
-  --color-gray-dim-5:       var(--color-gray-000);
-  --color-gray-dim-6:       #EBEAF1;
+  --color-gray-dim-5:       var(--color-gray-050);
+  --color-gray-dim-6:       var(--color-gray-000);
 }
 
 :root[data-theme="dark"] {
-  --color-bg:            var(--color-black);
-  --color-text:          var(--color-white);
-  
-  --color-gray:          var(--color-gray-300);
+  --color-purple-bright:      #B350FF;
+  --color-purple-dim:         #9129DF;
+
+  --color-bg:               var(--color-gray-900);
+  --color-text:             var(--color-gray-050);
+
+  --color-gray:             var(--color-gray-300);
   
   --color-gray-bright-1:    var(--color-gray-200);
   --color-gray-bright-2:    var(--color-gray-100);
   --color-gray-bright-3:    var(--color-gray-000);
   --color-gray-bright-4:    var(--color-gray-000);
 
-  --color-gray-dim-1: var(--color-gray-400);
-  --color-gray-dim-2: var(--color-gray-500);
-  --color-gray-dim-3: var(--color-gray-600);
-  --color-gray-dim-4: var(--color-gray-700);
-  --color-gray-dim-5: var(--color-gray-800);
-  --color-gray-dim-6: var(--color-gray-900);
+  --color-gray-dim-1:       var(--color-gray-300);
+  --color-gray-dim-2:       var(--color-gray-500);
+  --color-gray-dim-3:       var(--color-gray-600);
+  --color-gray-dim-4:       var(--color-gray-700);
+  --color-gray-dim-5:       var(--color-gray-600);
+  --color-gray-dim-6:       var(--color-gray-900);
 }
+
+$social-links: (
+  facebook:   #3b5998,
+  github:     #0366d6,
+  instagram:  #c13584,
+  linkedin:   #0977b5,
+  pinterest:  #bd081c,
+  pocket:     #ef4056,
+  twitch:     #6441a5,
+  twitter:    #1da1f2,
+  rss:        #ff6600
+);
