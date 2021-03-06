@@ -1,12 +1,19 @@
-{% include header.html %}
+---
+layout: default
+---
+
+<h1 class="page_title">
+  <span>
+    {{ page.title }}
+  </span>
+</h1>
+
 
 <div class="sketchbook_sketches">
   {% assign sorted = site.sketches | sort: 'date' | reverse %}
   {% for sketch in sorted %}
   <article class="sketchbook_sketch">
-      {{ sketch.content }}
+    {{ sketch.content }}
   </article>
   {% endfor %}
 </div>
-
-{% include footer/footer.html %}

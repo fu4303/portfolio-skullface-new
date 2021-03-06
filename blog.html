@@ -3,6 +3,12 @@ title: Blog
 layout: default
 ---
 
+<h1 class="page_title">
+  <span>
+    {{ page.title }}
+  </span>
+</h1>
+
 <div class="posts posts_all">
   {% for post in site.posts %}
     {% include posts/preview.html %}
