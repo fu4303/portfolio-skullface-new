@@ -42,3 +42,63 @@
       margin-left: 5.5%;
     }
   }
+  
+.values-and-practices {
+  @extend %container;
+  @extend %margin-bottom-spacious;
+  ul {
+    @extend %no-list;
+    margin: 0;
+    padding: 0;
+    line-height: $leading-tight;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacer-2;
+    @media all and (min-width: 680px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    &:nth-of-type(even) .leads-to {
+      transform: scaleY(-1);
+    }
+  }
+  .value-arrow {
+    display: flex;
+    @media all and (max-width: 680px) {
+      margin-bottom: $spacer-half;
+    }
+    @media all and (min-width: 680px) {
+      justify-content: space-between;
+      width: 45%;
+      padding-right: $spacer-1;
+    }
+    @media screen and (min-width: 1300px) {
+      width: 50%;
+    }
+  }
+  .value {
+    @media all and (min-width: 680px) {
+      padding-right: $spacer-1;
+    }
+    font-weight: $font-weight_bold;
+    font-family: $font-family_head;
+  }
+  .leads-to {
+    @media all and (min-width: 680px) {
+      display: block;
+      flex: 1;
+      content: " ";
+      background: url('../img/arroow.svg') center right no-repeat;
+      background-size: auto 1em;
+    }
+  }
+  .practice {
+    font-size: $font-size_20;
+    font-family: $font-family_accent;
+  }
+}
+
+.recognition {
+}
