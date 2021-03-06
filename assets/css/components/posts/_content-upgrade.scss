@@ -9,8 +9,8 @@
   align-items: center;
   max-width: 62rem;
   margin: 2rem auto;
-  color: $color_white;
-  background: $color_gray-850;
+  color: var(--color-bg);
+  background: var(--color-gray-bright-3);
   input[type="text"],
   input[type="email"],
   input[type="url"],
@@ -19,18 +19,18 @@
   option,
   textarea {
     padding: 0.5rem 0;
-    color: $color_white;
-    border-color: $color_gray-800;
+    color: var(--color-bg);
+    border-color: var(--color-gray-bright-2);
   }
   .button,
   button,
   [type="submit"],
   [type="reset"] {
-    color: $color_primary;
+    color: var(--color-purple);
     margin-top: 1rem;
     &:active,
     &:hover {
-      color: $color_text;
+      color: var(--color-text);
     }
   }
 }

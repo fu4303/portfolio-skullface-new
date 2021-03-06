@@ -42,12 +42,12 @@
 }
 
 .octicon-sun {
-  color: var(--color-gray-bright-2);
+  color: var(--color-gray-200);
   background-color: var(--color-white);
 }
 
 .octicon-moon {
-  color: var(--color-gray-dim-3);
+  color: var(--color-gray-700);
   background-color: var(--color-text);
 }
 
@@ -83,8 +83,8 @@
   }
   margin-top: auto; // push to bottom of page
   font-family: $font-family_head;
-  color: var(--color-bg);
-  background-color: var(--color-gray-bright-3);
+  color: var(--color-white);
+  background-color: var(--color-gray-850);
 }
 
 .Footer__newsletter {
@@ -123,7 +123,7 @@
   @extend %margin-bottom-default;
 
   p {
-    color: var(--color-gray-dim-2);
+    color: var(--color-gray-300);
     font-family: $font-family_accent;
     @include breakpoint(lg) {
       margin-left: $spacer-6;
@@ -156,11 +156,11 @@
 }
 
 .skull-type__sparkles {
-  fill: var(--color-gray-bright-1);
+  fill: var(--color-gray-600);
 }
 
 .skull-type__type {
-  fill: var(--color-gray-dim-2);
+  fill: var(--color-gray-300);
 }
 
 .Footer__links {
@@ -171,9 +171,12 @@
   font-size: $font-size_14;
   @extend %margin-bottom-default;
   line-height: $leading-spacious;
+  ul {
+    @extend %no-list;
+  }
   a {
     display: block;
-    color: var(--color-bg);
+    color: var(--color-white);
     font-weight: $font-weight-bold;
     text-decoration: none;
     &:hover {
@@ -211,14 +214,14 @@
   width: $spacer-2;
   height: $spacer-2;
   margin-right: $spacer-1;
-  fill: var(--color-gray-dim-2);
+  fill: var(--color-gray-300);
 }
 
 .Footer__skull {
   min-width: 3em;
   max-width: 7em;
   height: 80%;
-  fill: var(--color-gray);
+  fill: var(--color-gray-500);
   @include breakpoint(xl) {
     margin-right: 0;
     margin-left: auto;
@@ -228,7 +231,7 @@
 .Footer__copyright {
   margin-top: auto;
   font-size: $font-size_12;
-  color: var(--color-gray-dim-2);
+  color: var(--color-gray-300);
   margin-bottom: 0;
 }
 
@@ -240,18 +243,19 @@
     width: 30em;
   }
 
-  background-color: var(--color-text);
+  background-color: var(--color-gray-800);
   background-image: url('../img/footer/postmark.png');
   background-position: center -40px;
   background-repeat: no-repeat;
   
   p {
+    color: var(--color-gray-100);
     font-family: $font-family_accent;
-    @extend %margin-bottom-default;
+    @extend %margin-bottom-condensed;
   }
   
   fieldset {
-    @extend %margin-bottom-default;
+    @extend %margin-bottom-condensed;
   }
   
   input {
@@ -269,35 +273,37 @@
   input[type="email"],
   input[type="text"] {
     width: 100%;
-    padding: 0 0 $spacer-1 0;
-    color: var(--color-bg);
-    border-bottom: solid 2px var(--color-gray);
+    padding-top: $spacer-1;
+    padding-bottom: $spacer-1;
+    padding-left: $spacer-1 * 1.5;
+    padding-right: $spacer-1 * 1.5;
+    color: var(--color-white);
+    border: solid 2px var(--color-gray-500);
+    border-radius: $spacer-1;
     background-color: transparent;
 
     &::placeholder {
-      color: var(--color-gray-dim-3);
+      color: var(--color-gray-200);
     }
 
     &.focus,
     &:focus {
       outline: none;
-      border-bottom-color: var(--color-purple);
+      border-color: var(--color-purple);
     }
   }
   
   label.form__checkbox {
-    color: var(--color-bg);
+    color: var(--color-white);
   }
 
-  legend {
-    margin-bottom: 0;
+  legend,
+  .legend {
+    display: block;
+    margin-bottom: $spacer-1;
     font-weight: $font-weight_bold;
-    color: var(--color-gray-dim-2);
+    color: var(--color-gray-200);
   }
-}
-
-.form__checkboxes {
-  margin-top: $spacer-2;
 }
 
 // Custom checkbox styling
@@ -332,7 +338,7 @@
     }
     // create checkbox
     &:before {
-      border: 2px solid var(--color-gray);
+      border: 2px solid var(--color-gray-500);
     }
     // simulate ::checked state
     &:after {
@@ -356,7 +362,7 @@
 
 input[type="submit"] {
   width: 100%;
-  color: var(--color-bg);
+  color: var(--color-white);
   border-color: var(--color-purple);  
   margin-bottom: 0;
   &:hover,

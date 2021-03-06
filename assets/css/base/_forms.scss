@@ -11,13 +11,13 @@ select,
 option,
 textarea {
   width: 100%;
-  color: $color_text;
+  color: var(--color-text);
   background: transparent;
   border: 0;
-  border-bottom: solid 2px $color_gray-100;
+  border-bottom: solid 2px var(--color-gray-dim-5);
   -webkit-appearance: none;
   &::placeholder {
-    color: $color_gray-300;
+    color: var(--color-gray-dim-4);
   }
 }
 
@@ -65,16 +65,16 @@ button,
   margin-right: auto;
   padding: 14px 25px;
   font-weight: $font-weight_bold;
-  color: $color_text;
+  color: var(--color-text);
   background: transparent;
   border-radius: $spacer-half;
-  border: solid 3px $color_primary;
+  border: solid 3px var(--color-purple);
   cursor: pointer;
   @media screen and (max-width: 700px) {
     font-size: 1rem;
   }
   &:hover, &:active {
-    background: $color_primary;
+    background: var(--color-purple);
   }
   &:focus {
     outline: none;
