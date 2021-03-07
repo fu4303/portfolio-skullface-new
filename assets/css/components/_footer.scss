@@ -43,7 +43,7 @@
 
 .octicon-sun {
   color: var(--color-gray-200);
-  background-color: var(--color-white);
+  background-color: var(--color-gray-000);
 }
 
 .octicon-moon {
@@ -83,7 +83,7 @@
   }
   margin-top: auto; // push to bottom of page
   font-family: $font-family_head;
-  color: var(--color-white);
+  color: var(--color-gray-000);
   background-color: var(--color-gray-850);
 }
 
@@ -176,7 +176,7 @@
   }
   a {
     display: block;
-    color: var(--color-white);
+    color: var(--color-gray-000);
     font-weight: $font-weight-bold;
     text-decoration: none;
     &:hover {
@@ -277,7 +277,7 @@
     padding-bottom: $spacer-1;
     padding-left: $spacer-1 * 1.5;
     padding-right: $spacer-1 * 1.5;
-    color: var(--color-white);
+    color: var(--color-gray-000);
     border: solid 2px var(--color-gray-500);
     border-radius: $spacer-1;
     background-color: transparent;
@@ -294,7 +294,7 @@
   }
   
   label.form__checkbox {
-    color: var(--color-white);
+    color: var(--color-gray-000);
   }
 
   legend,
@@ -362,12 +362,12 @@
 
 input[type="submit"] {
   width: 100%;
-  color: var(--color-white);
+  color: var(--color-gray-000);
   border-color: var(--color-purple);  
   margin-bottom: 0;
   &:hover,
   &:focus {
-    color: var(--color-white);
+    color: var(--color-gray-000);
     border-color: var(--color-purple);
     background-color: var(--color-purple);
   }
