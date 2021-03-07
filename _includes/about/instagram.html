@@ -1,0 +1,14 @@
+<a href="https://www.instagram.com/{{ include.username }}/" class="instagram">
+  <ul>
+    <li class="instagram-follow">
+      <span>
+        Latest on IG 👉
+      </span>
+    </li>
+    {% for i in (0..4) %}
+      <li>
+        <img src="https://profilepageimages.usecue.com/images/{{ include.username }}/small/{{ i }}.jpg" alt="">
+      </li>
+    {% endfor %}
+  </ul>
+</a>
