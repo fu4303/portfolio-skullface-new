@@ -72,4 +72,8 @@ defaults:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      is_post: true # automatically set is_post=true for all posts
+      is_post: true # automatically set "is_post" as true for all posts
+  - scope:
+      path: "" # empty string for all files
+    values:
+      heading: "condensed" # automatically set heading layout type as "condensed"

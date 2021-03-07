@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 description: "If you’d like to get in touch with me, send a <a href='http://twitter.com/home?status=@skullface%20Hi!%20I%20wanted%20to%20say%20'>tweet</a> or an email at <code>meow@</code> this domain. 💌"
+heading: expanded
 permalink: contact
 ---
 

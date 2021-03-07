@@ -2,6 +2,7 @@
 title: About
 description: "Interdisciplinary designer, visual artist, and programmer fighting for love and justice."
 layout: page
+heading: expanded
 permalink: /about/
 ---
 
