@@ -1,63 +1,3 @@
-.theme-switch {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 100;
-  width: 3rem;
-  height: 3rem;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 300;
-  color: red;
-  border-radius: 50%;
-  box-shadow: 0 .25rem .5rem blue;
-}
-.theme-switch-checkbox {
-  position: absolute;
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  white-space: nowrap;
-
-  ~ .octicon-sun { display: none; }
-  ~ .octicon-moon { display: block; }
-
-  &:checked {
-    ~ .octicon-sun { display: block; }
-    ~ .octicon-moon { display: none; }
-  }
-}
-
-.octicon-sun,
-.octicon-moon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3rem;
-  height: 3rem;
-  padding: .75rem;
-}
-
-.octicon-sun {
-  color: var(--color-gray-200);
-  background-color: var(--color-gray-000);
-}
-
-.octicon-moon {
-  color: var(--color-gray-700);
-  background-color: var(--color-text);
-}
-
-
-
-
-
-
-
-
 .form__form-group--stacked {
   input {
     display: block;
@@ -220,7 +160,7 @@
 .Footer__skull {
   min-width: 3em;
   max-width: 7em;
-  height: 80%;
+  align-self: center;
   fill: var(--color-gray-500);
   @include breakpoint(xl) {
     margin-right: 0;
