@@ -4,7 +4,8 @@
   "description": "idk my bff jill",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run -s lint:stylelint",
+    "lint:stylelint": "stylelint --quiet assets/css"
   },
   "author": "Jessica Paoli",
   "license": "GPL-3.0-or-later",
@@ -16,9 +17,10 @@
     "url": "https://github.com/skullface/skullface.me.git"
   },
   "homepage": "https://github.com/skullface/skullface.me",
-  "dependencies": {
-    "@shopify/draggable": "^1.0.0-beta.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "stylelint": "^13.12.0",
+    "stylelint-config-primer": "^11.0.0",
+    "stylelint-scss": "^3.19.0"
   }
 }
