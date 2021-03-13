@@ -2,3 +2,11 @@
 title: Sketchbook
 layout: sketchbook
 ---
+
+{% assign media_url = site.url | append: "/media/" %}
+
+<div class="sketchbook_sketches">
+  {% for sketch in site.data.sketches %}
+    <img src="{{ sketch.file | prepend: site.baseurl | prepend: media_url }}" alt="Illustration called '{{ sketch.title }}'">
+  {% endfor %}
+</div>
