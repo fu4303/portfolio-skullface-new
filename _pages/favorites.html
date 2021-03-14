@@ -7,7 +7,9 @@ permalink: /favorites
 ---
 
 {% for group in site.data.favorites %}
-  <h2>{{ group.group }}</h2>
+  <h2>
+    {{ group.group }}
+  </h2>
 
   <div class="favorites">
     {% for tool in group.tools %}

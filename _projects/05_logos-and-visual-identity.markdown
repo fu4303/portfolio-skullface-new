@@ -9,7 +9,7 @@ icon:   logos
 disciplines:  ""
 direction:    ""
 
-description:  "<p>A smattering of logotypes, logomarks, and extended applications for various ventures.</p>"
+description:  "A smattering of logotypes, logomarks, and extended applications for various ventures."
 
 ---
 

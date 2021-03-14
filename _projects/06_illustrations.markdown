@@ -9,7 +9,7 @@ icon:   illo
 disciplines:  ""
 direction:    ""
 
-description:  "<p>Please check the <a href='/shop'>Shop</a> to see if any of these prints are available for purchase! I&rsquo;m currently not accepting commissions at this time, but feel free to email me to get in the pipeline.</p>"
+description:  "Please check the <a href='/shop'>Shop</a> to see if any of these prints are available for purchase! I&rsquo;m currently not accepting commissions at this time, but feel free to email me to get in the pipeline."
 
 ---
 
