@@ -73,8 +73,11 @@ button,
   @media screen and (max-width: 700px) {
     font-size: 1rem;
   }
-  &:hover, &:active {
-    background: var(--color-purple);
+  &:hover,
+  &:focus {
+    color: var(--color-gray-000);
+    border-color: var(--color-purple);
+    background-color: var(--color-purple);
   }
   &:focus {
     outline: none;
