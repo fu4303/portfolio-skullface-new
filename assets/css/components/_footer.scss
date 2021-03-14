@@ -15,7 +15,6 @@
  *
 */
 
-
 .Footer {
   @include breakpoint(md) {
     display: flex;
@@ -187,39 +186,40 @@
   background-image: url('../img/footer/postmark.png');
   background-position: center -40px;
   background-repeat: no-repeat;
-  
+
   p {
-    color: var(--color-gray-100);
+    color: var(--color-gray-000);
     font-family: $font-family_accent;
     @extend %margin-bottom-condensed;
+    margin-bottom: $spacer-5;
   }
-  
+
   fieldset {
     @extend %margin-bottom-condensed;
   }
-  
+
   input {
     border-color: transparent;
     box-shadow: none;
   }
-  
+
   input,
   label,
   legend,
   span {
     font-size: $font-size_16;
   }
-  
+
   input[type="email"],
   input[type="text"] {
     width: 100%;
-    padding-top: $spacer-1;
+    padding-top: 0;
     padding-bottom: $spacer-1;
-    padding-left: $spacer-1 * 1.5;
-    padding-right: $spacer-1 * 1.5;
+    padding-left: 0;
+    padding-right: 0;
     color: var(--color-gray-000);
-    border: solid 2px var(--color-gray-500);
-    border-radius: $spacer-1;
+    border-bottom: solid 2px var(--color-gray-500);
+    border-radius: 0;
     background-color: transparent;
 
     &::placeholder {
@@ -232,7 +232,7 @@
       border-color: var(--color-purple);
     }
   }
-  
+
   label.form__checkbox {
     color: var(--color-gray-000);
   }
@@ -246,6 +246,7 @@
   }
 
   input[type="submit"] {
+    margin-top: $spacer-2;
     border-color: var(--color-purple);
     color: var(--color-gray-000);
   }
@@ -256,7 +257,7 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  
+
   input {
     position: absolute;
     top: 0;
@@ -265,7 +266,7 @@
     height: 12px;
     opacity: 0;
   }
-  
+
   span {
     margin-left: $spacer-3;
   }
@@ -293,13 +294,13 @@
       transition: opacity 0.085s ease-in-out;
     }
   }
-    
+
   // add focus state styling
   input:hover + span:before,
   input:focus + span:before  {
     border-color: var(--color-purple);
   }
-  
+
   input:checked + span:after {
     opacity: 1;
   }
