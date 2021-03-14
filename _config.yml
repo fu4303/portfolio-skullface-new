@@ -55,9 +55,9 @@ mediapath:
 
 # Collections
 collections:
-  sketches:
+  pages:
     output: true
-    permalink: /sketchbook/:path/
+    permalink: /:path/
   projects:
     output: true
     permalink: /project/:path/

@@ -1,0 +1,12 @@
+---
+layout: page
+title: "Download freebies"
+category: Downloads
+permalink: /downloads
+---
+
+<div class="posts posts_all">
+  {% for post in site.categories[page.category] %}
+    {% include posts/preview.html %}
+  {% endfor %}
+</div>
