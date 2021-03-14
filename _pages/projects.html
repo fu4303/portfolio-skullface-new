@@ -1,4 +1,42 @@
 ---
-title: Projects
-layout: projects
+layout: page
+title: "Projects"
+description: "I do shit"
+heading: condensed
 ---
+
+<div class="projects" id="projects">
+  {% assign projectsAlphabetized = site.projects | sort: 'path' %}
+  {% for project in projectsAlphabetized %}
+  <div class="project" id="{{ project.slug }}">
+    <div class="post_content">
+      <h2 class="site_title">
+        {{ project.title }} {% include icon_{{ project.icon }}.svg %}
+      </h2>
+  
+      <p>
+        {{ project.description }}
+      </p>
+
+      {% if project.disciplines != '' %}
+      <dl class="project_metadata">
+        <div class="metadata_disciplines">
+          <dt>Disciplines</dt>
+          <dd>{{ project.disciplines }}</dd>
+        </div>
+        {% if project.direction != '' %}
+          <div class="metadata_direction">
+            <dt>Team</dt>
+            <dd>{{ project.direction }}</dd>
+          </div>
+        {% endif %}
+      </dl>
+      {% endif %}
+    </div>
+
+    <div class="project_media">
+      {{ project.content }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
