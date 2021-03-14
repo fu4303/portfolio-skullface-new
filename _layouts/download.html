@@ -44,20 +44,4 @@ layout: default
 
 </article>
 
-
-<div class="related-posts_container">
-<div class="related-posts">
-
-    <div class="related-posts_heading">
-      <h3>Download more <a href="{{ site.baseurl }}/downloads">free goodies</a> <span class="point">👉</span></h3>
-    </div>
-
-    {% for post in site.categories['Downloads'] limit:3 %}
-      <a class="related-posts_post" href="{{ site.baseurl }}{{ post.url }}" style="background-image: url('{{ site.url }}{{ site.baseurl }}/{{ site.mediapath.post }}{{ post.date | date: '%Y' }}/jessicapaoli-dot-com_{{ post.image }}')">
-        <h4>
-          <span>{{ post.title }}</span>
-        </h4>
-      </a>
-    {% endfor %}
-</div>
-</div>
+{% include posts/related.html %}
