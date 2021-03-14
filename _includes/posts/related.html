@@ -33,10 +33,6 @@
               {% break %}
             {% endif %}
           {% endfor %}
-          {% unless already_related %}
-            {% assign posts_left = posts_left | minus: 1 %}
-              {% include posts/share.html %}
-          {% endunless %}
         {% endfor %}
       {% endunless %}
   </div>
