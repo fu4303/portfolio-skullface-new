@@ -4,44 +4,39 @@ layout: default
 
 {% capture imagepath %}{{ site.baseurl }}{{ site.mediapath.post }}{{ download.date | date: '%Y' }}/jessicapaoli-dot-com_{{ download.image }}{% endcapture %}
 
-<article class="post">
-
-  <div class="download_content">
-    <div class="download_media">
-      <a href="{{ page.download-url }}"><img src="{{ site.baseurl }}/media/posts/{{ page.date | date: '%Y' }}/jessicapaoli-dot-com_{{ page.image }}" /></a>
-
-    </div>
-
-    <div class="download_description">
-      <header class="download_header">
-        <h1 class="post_title"><span>{{ page.title }}</span></h1>
-      </header>
-
-      <div class="post_content">
-        <p>
-          {{ page.description }}
-        </p>
-      </div>
-
-      <p class="download_button"><a href="{{ page.download-url }}" class="download button">Download <span class="arrow">&gt;</span></a></p>
+<article>
+  <div class="page_intro download_intro">
+    <img class="download_media" src="{{ site.baseurl }}/media/posts/{{ page.date | date: '%Y' }}/jessicapaoli-dot-com_{{ page.image }}" alt="">
+    <div class="download_info">
+      <h1 class="page_title"><span>{{ page.title }}</span></h1>
+      <p>
+        {{ page.description }}
+        <span class="download_button">
+          <a href="{{ page.download-url }}">
+          Download <span class="arrow">&gt;</span>
+          </a>
+        </span>
+      </p>
     </div>
   </div>
 
-  {% if page.longform == true %}
-    <div class="post_content">
+  <div class="post_content">
+    {% if page.longform == true %}
       {{ page.content }}
+    {% endif %}
+    <div class="download_button">
+      <a href="{{ page.download-url }}" class="button">
+        Download <span class="arrow">&gt;</span>
+      </a>
     </div>
-    <p class="download_button"><a href="{{ page.download-url }}" class="download button">Download <span class="arrow">&gt;</span></a></p>
-  {% endif %}
+  </div>
 
-  <footer class="post_meta">
-
-    {% include posts/share.html %}
-      <p>
-        Last updated: <time class="post_updated" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-      </p>
-  </footer>
-
+  <div class="post_meta">
+    <div class="post_updated">
+      Last updated: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+    </div>
+    <div class="post_social">
+      {% include posts/share.html %}
+    </div>
+  </div>
 </article>
-
-{% include posts/related.html %}

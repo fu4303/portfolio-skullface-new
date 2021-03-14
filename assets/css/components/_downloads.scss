@@ -1,90 +1,33 @@
-.downloads .posts_all {
-  h2:hover span,
-  h2:hover b {
-    color: var(--color-purple);
-  }
-}
-
-.posts_all .resource {
-  flex-direction: column;
-}
-
-  .posts_all .resource .post_meta {
-    margin-top: 0;
-  }
-
-.resource_summary {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-span.arrow {
-  display: inline-block;
-  position: relative;
-  top: 2px;
-  padding: 0;
-  transform: rotate(90deg);
-}
-
-.caret.arrow {
-  left: 3px;
-  top: 5px;
-}
-
-
-.download_header {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  text-align: center;
-  .post_title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-}
-
-.download_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  @media all and (max-width: 800px) {
-    flex-direction: column;
-  }
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4rem;
-  .post_content {
-    margin-top: 0;
+.download_intro {
+  margin-bottom: $spacer-4 * 2;
+  @media screen and (min-width: 700px) {
+    div {
+      left: -1rem;
+    }
   }
 }
 
 .download_media {
-  width: 50%;
-  @media all and (max-width: 800px) {
-    width: 100%;
-  }
-}
-
-.download_description {
-  margin-left: 4rem;
-  width: 40%;
-  @media all and (max-width: 800px) {
-    width: 100%;
-    margin-left: 0;
-  }
-  p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  width: 500px;
+  height: 500px;
+  box-shadow: -$spacer-2 $spacer-2 0 var(--color-gray-dim-3);
+  @media screen and (max-width: 700px) {
+    order: 2;
+    margin-top: 0;
+    width: 300px;
+    height: 300px;
   }
 }
 
 .download_button {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.5rem;
-  text-align: center;
+}
+
+.post_content .download_button {
+  display: block;
+  @extend %container;
+  margin-bottom: $spacer-4;
+  a {
+    display: block;
+    text-align: center;
+  }
 }
