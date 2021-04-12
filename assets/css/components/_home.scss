@@ -43,19 +43,10 @@ h1.page_title.homepage_title {
     height: 20px;
 }
 
-#collage {
-}
-
 .collage_container {
+  position: relative;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  position: relative;
-}
-
-.draggable {
-  display: inline-block;
-  cursor: move;
-}
 
   .pin {
     max-height: 300px;
@@ -206,3 +197,4 @@ h1.page_title.homepage_title {
       max-width: 140px;
     }
   }
+}
