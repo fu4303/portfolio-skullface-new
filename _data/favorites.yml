@@ -1,42 +1,11 @@
-- group: Project management
+- group: Hardware
   tools:
-    - title: PM question 1?
-      description: asdfkjalsf
-
-    - title: PM question 2?
-      description: asjdkfljaslf
-
-    - title: PM question 3?
-      description: |
-        afkjdslkfjsdf</p>
-        
-        <p>skfjlaslfkjsdlkfj
-
-- group: Design
-  tools:
-    - title: Design question one?
-      description: as;ldkjfksdf
-    - title: Question about deisgn 2?
-      description: opiuiowrehjnkasf,msadflj
-    - title: Question about design 3!
-      description: asdfkljasf
-
-- group: Development
-  tools:
-    - title: First dev Q
-      description: boiefjvaklsfkamsfd
-
-    - title: Second dev Q
-      description: |
-        we can use other html too
-        <ul>
-          <li>sailor mercury</li>
-          <li>sailor mars</li>
-          <li>sailor jupiter</li>
-          <li>sailor venus</li>
-        </ul>
-
-- group: Misc
-  tools:
-    - title: First andnal question in misc
-      description: adfjahhjflawkfc,
+    - title: "Evoluent vertical mouse"
+      description: "The small Evoluent VerticalMouse 4 (VM4S) is NOT beautiful, but it does help reduce strain significantly. Sleeker-looking ergo pointer devices don’t come in sizes small enough for my hands. This one proves function > form."
+      image: "https://images-na.ssl-images-amazon.com/images/I/51JNfYuI93L._AC_SL1200_.jpg"
+      url: https://amzn.to/38Cq1PU
+      padding: true
+      
+    - title: "Ergodox EZ"
+      description: "The Ergodox EZ is the best out-of-the-box ergonomic keyboard you can buy. As a bonus, it’s the perfect canvas to customize with different switches, caps, and cables!"
+      url: "https://ergodox-ez.com/"

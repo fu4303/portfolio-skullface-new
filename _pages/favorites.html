@@ -1,28 +1,43 @@
 ---
 layout: page
-title: "My favorite design business tools and resources"
-description: "The tools you use can make or break your online business. Here are the tools and resources I use to run my own business–from web design and client management to marketing and SEO."
-heading: expanded
+title: "Favorites"
+description: "Software and hardware I use as a designer, developer, content creator, and small business owner."
+heading: condensed
 permalink: /favorites
 ---
 
+<p>
+  My favorite tools and resources I use in my day-to-day work — my personal life tech stack. I recommend all of these products because I actually use them. Some links are affiliate links, as stated in my disclaimer.
+</p>
+
 {% for group in site.data.favorites %}
-  <h2>
-    {{ group.group }}
-  </h2>
+  <div class="favorites_group">
+    <h2>
+      {{ group.group }}
+    </h2>
 
-  <div class="favorites">
-    {% for tool in group.tools %}
-    {% assign fav_slug = tool.title | slugify %}
-      <div id="{{ fav_slug }}">
-        <h3>
-          {{ tool.title }}
-        </h3>
+    <div class="favorites_tools">
+      {% for tool in group.tools %}
+      {% assign fav_slug = tool.title | slugify %}
+        <div class="favorite" id="{{ fav_slug }}">
+          <div class="favorite_media{% if tool.padding %} favorite_media--spaced{% endif %}">
+            <a href="{{ tool.url }}">
+              <img src="{% if tool.image %}{{ tool.image }}{% else %}{{ site.baseurl }}/assets/img/favorites/{{ tool.title | slugify }}.jpg{% endif %}" alt="">
+            </a>
+          </div>
+          <div class="favorite_info">
+            <h3>
+              <a href="{{ tool.url }}">
+                {{ tool.title }}
+              </a>
+            </h3>
 
-        <p>
-          {{ tool.description }}
-        </p>
-      </div>
-    {% endfor %}
+            <p>
+              {{ tool.description }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>  
 {% endfor %}
