@@ -3,11 +3,6 @@
 .Header {
   @extend %contain;
   padding-top: $spacer-2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @extend %small-caps;
-  font-weight: $font-weight_bold;
 }
 
 .App_page .Header {
@@ -18,19 +13,86 @@
   padding-bottom: $spacer-2;
 }
 
+.Header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro .Header {
   background: transparent;
 }
 
-.Header__nav a {
-  display: inline-block;
+.Header__nav > li {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-content: flex-start;
+
   &:first-of-type {
     margin-right: $spacer-5;
   }
-  color: var(--color-text);
-  &:hover,
+}
+
+.Header__nav {
+  display: flex;
+  flex-wrap: no-wrap; /* RWD */
+  justify-content: space-evenly;
+  align-items: stretch;
+  @extend %no-list;
+
+  a,
+  button.more-links-button {
+    @extend %small-caps;
+    font-weight: $font-weight_bold;
+    color: var(--color-text);
+
+    &:hover,
+    &:focus {
+      color: var(--color-purple-bright);
+    }
+  }
+
+  & > * {
+    flex: 1 1 auto;
+  }
+
+  @media screen and (max-width: 60em) {
+    flex-wrap: wrap;
+  }
+}
+
+.more-links-parent {
+  position: relative;
+}
+
+button.more-links-button {
+  cursor: pointer;
+  background: 0;
+  outline: none;
   &:focus {
-    color: var(--color-purple-bright);
+    outline: 3px solid var(--color-purple-dim);
+  }
+}
+
+.more-links-list {
+  position: absolute;
+  top: 120%;
+  width: auto;
+  min-width: 12em;
+  height: auto;
+  overflow: visible;
+  z-index: 10;
+  padding: $spacer-3;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+  background: var(--color-bg);
+  @extend %no-list;
+  @media screen and (min-width: 60em) {
+    left: -$spacer-3;
+  }
+  @media screen and (max-width: 60em) {
+    right: 0;
   }
 }
 

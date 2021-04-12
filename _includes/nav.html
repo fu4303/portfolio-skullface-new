@@ -1,23 +1,108 @@
 <header class="Header" role="banner">
-  <nav class="Header__nav">
-    <a href="/about">
-      About
+  <nav>
+    <ul class="Header__nav">
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects">
+          Work
+        </a>
+      </li>
+    </ul>
+    <a href="/" id="💀" class="Header__logo">
+      {% include global/assets/skull-both.svg class="Header__skull" aria-label="Home" %}
     </a>
-    <a href="/projects">
-      Work
-    </a>
-  </nav>
-
-<a href="/" id="💀" class="Header__logo">
-    {% include global/assets/skull-both.svg class="Header__skull" aria-label="Home" %}
-  </a>
-
-  <nav class="Header__nav">
-    <a href="/blog">
-      Blog
-    </a>
-    <a href="">
-      More
-    </a>
+    <ul class="Header__nav">
+      <li>
+        <a href="/blog">
+          Blog
+        </a>
+      </li>
+      <li id="moreLinks" class="more-links-parent">
+        <button type="button" class="more-links-button" id="moreLinksButton" aria-controls="moreLinksList" aria-expanded="false" aria-label="Show" aria-labelledby="moreLinksButton" onclick="toggleMoreLinks(this.id);">
+        More
+          </button>
+        <ul id="moreLinksList" class="more-links-list" style="display: none;">
+          <li>
+            <a href="/favorites">Favorites</a>
+          </li>
+          <li>
+            <a href="/downloads">Downloads</a>
+          </li>
+          <li>
+            <a href="/sketchbook">Sketchbook</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="/shop">Shop</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </header>
+
+<script>
+const moreLinks = document.getElementById("moreLinks");
+function toggleMoreLinks(eID) {
+  try {
+    const allButtons = document.querySelectorAll("#moreLinks > button");
+    const allSubMenus = document.querySelectorAll("#moreLinks > button + ul");
+    if (eID !== "") {
+      const toggle = document.querySelector("#" + eID);
+      const subMenuIdent = toggle.getAttribute("aria-controls");
+      const subMenu = document.getElementById(subMenuIdent);
+      if (toggle.getAttribute("aria-expanded") === "false") {
+        for (let i = 0; i < allButtons.length; i++) {
+          allButtons[i].setAttribute("aria-expanded", "false");
+          allButtons[i].setAttribute("aria-label", "Show");
+        }
+        toggle.setAttribute("aria-expanded", "true");
+        toggle.setAttribute("aria-label", "Hide");
+      } else {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Show");
+      }
+      if (subMenu.style.display === "none") {
+        for (let i = 0; i < allSubMenus.length; i++) {
+          allSubMenus[i].style.display = "none";
+        }
+        subMenu.style.display = "block";
+      } else {
+        subMenu.style.display = "none";
+      }
+    }
+    if (eID !== "") {
+    } else {
+      for (let i = 0; i < allSubMenus.length; i++) {
+        allSubMenus[i].style.display = "none";
+      }
+      for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].setAttribute("aria-expanded", "false");
+        allButtons[i].setAttribute("aria-label", "Show");
+      }
+    }
+  } catch (e) {
+    console.log("toggleMoreLinks(): " + e);
+  }
+}
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  let isEscape = false;
+  if ("key" in evt) {
+    isEscape = evt.key == "Escape" || evt.key == "Esc";
+  } else {
+    isEscape = evt.keyCode == 27;
+  }
+  if (isEscape) {
+   
+    toggleMoreLinks("");
+  }
+};
+</script>
