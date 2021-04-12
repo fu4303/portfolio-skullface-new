@@ -213,10 +213,6 @@
   input[type="email"],
   input[type="text"] {
     width: 100%;
-    padding-top: 0;
-    padding-bottom: $spacer-1;
-    padding-left: 0;
-    padding-right: 0;
     color: var(--color-gray-000);
     border-bottom: solid 2px var(--color-gray-500);
     border-radius: 0;
@@ -224,12 +220,6 @@
 
     &::placeholder {
       color: var(--color-gray-200);
-    }
-
-    &.focus,
-    &:focus {
-      outline: none;
-      border-color: var(--color-purple);
     }
   }
 

@@ -1,36 +1,29 @@
-.contact_form_container {
-  input, textarea {
-    font-size: 1.125rem;
-  }
-}
-
-.contact_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: flex-start;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-.form-detail label {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.contact_form textarea {
-  height: 140px;
-}
-
-.contact_form .submit {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 .contact_intro,
 .about_intro {
   figure {
     background-image: url("/assets/img/contact.jpg");
+  }
+}
+
+.contact_form_container {
+  label span {
+    color: var(--color-gray-dim-1);
+  }
+
+  label {
+    width: 100%;
+  }
+
+  input {
+    padding-top: $spacer-1;
+  }
+
+  .form-detail {
+    margin-bottom: $spacer-2;
+  }
+
+  .g-recaptcha {
+    margin-top: $spacer-4;
+    margin-bottom: $spacer-6;
   }
 }
